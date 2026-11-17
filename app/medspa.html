@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <style>:root { --accent: #3b82f6; }</style>
 </head>
-<body>
+<body class="theme-medspa">
 
 <nav class="nav">
   <div class="container nav-inner">
@@ -51,6 +51,8 @@
     </div>
   </div>
 </header>
+
+<main id="main-content">
 
 <div class="metrics">
   <div class="container metrics-row">
@@ -124,13 +126,19 @@
         <h2 data-i18n="visitH">Hours</h2>
       </div>
       <table class="hours-table">
-        <tr data-day="mon"><td data-i18n="dayMon">Monday</td><td data-i18n="closed">Closed</td></tr>
-        <tr data-day="tue"><td data-i18n="dayTue">Tuesday</td><td>10:00 – 18:00</td></tr>
-        <tr data-day="wed"><td data-i18n="dayWed">Wednesday</td><td>10:00 – 18:00</td></tr>
-        <tr data-day="thu"><td data-i18n="dayThu">Thursday</td><td>10:00 – 19:00</td></tr>
-        <tr data-day="fri"><td data-i18n="dayFri">Friday</td><td>10:00 – 19:00</td></tr>
-        <tr data-day="sat"><td data-i18n="daySat">Saturday</td><td>9:00 – 17:00</td></tr>
-        <tr data-day="sun"><td data-i18n="daySun">Sunday</td><td data-i18n="closed">Closed</td></tr>
+        <caption data-i18n="hoursCaption">Operating Hours</caption>
+        <thead>
+          <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr data-day="mon"><th scope="row" data-i18n="dayMon">Monday</th><td data-i18n="closed">Closed</td></tr>
+          <tr data-day="tue"><th scope="row" data-i18n="dayTue">Tuesday</th><td>10:00 – 18:00</td></tr>
+          <tr data-day="wed"><th scope="row" data-i18n="dayWed">Wednesday</th><td>10:00 – 18:00</td></tr>
+          <tr data-day="thu"><th scope="row" data-i18n="dayThu">Thursday</th><td>10:00 – 19:00</td></tr>
+          <tr data-day="fri"><th scope="row" data-i18n="dayFri">Friday</th><td>10:00 – 19:00</td></tr>
+          <tr data-day="sat"><th scope="row" data-i18n="daySat">Saturday</th><td>9:00 – 17:00</td></tr>
+          <tr data-day="sun"><th scope="row" data-i18n="daySun">Sunday</th><td data-i18n="closed">Closed</td></tr>
+        </tbody>
       </table>
     </div>
     <div>
@@ -144,6 +152,9 @@
     </div>
   </div>
 </section>
+
+<div class="demo-badge" data-i18n="demo_badge">DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio</div>
+</main>
 
 <footer class="footer">
   <div class="container footer-inner">
@@ -203,7 +214,9 @@ window.I18N = {
     lblLicense: "LICENSE", license: "TX Med Spa · Physician-supervised · Insured",
     lblNew: "NEW CLIENTS", newc: "Consults this week still available",
     footP: "© 2026 Elevate Med Spa · Demo site — business name, photos and data are illustrative.",
-    backGallery: "Back to demo gallery", abCall: "Call now", abBook: "Book consult"
+    backGallery: "Back to demo gallery", abCall: "Call now", abBook: "Book consult",
+    hoursCaption: "Operating Hours",
+    demo_badge: "DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio"
   },
   es: {
     navTreat: "Tratamientos", navAbout: "Por qué Elevate", navReviews: "Reseñas", navVisit: "Visítanos", navBook: "Reservar", otherLang: "EN",
@@ -237,7 +250,9 @@ window.I18N = {
     lblLicense: "LICENCIA", license: "TX Med Spa · Con supervisión médica · Asegurado",
     lblNew: "CLIENTES NUEVOS", newc: "Aún hay consultas disponibles esta semana",
     footP: "© 2026 Elevate Med Spa · Sitio demo — nombre, fotos y datos son ilustrativos.",
-    backGallery: "Volver a la galería", abCall: "Llamar", abBook: "Reservar"
+    backGallery: "Volver a la galería", abCall: "Llamar", abBook: "Reservar",
+    hoursCaption: "Horario de atención",
+    demo_badge: "VISTA PREVIA DEMO — Perfil comercial ficticio creado por OKComputer Web Studio"
   }
 };
 </script>
