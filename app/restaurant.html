@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <style>:root { --accent: #3b82f6; }</style>
 </head>
-<body>
+<body class="theme-restaurant">
 
 <nav class="nav">
   <div class="container nav-inner">
@@ -50,6 +50,8 @@
     </div>
   </div>
 </header>
+
+<main id="main-content">
 
 <div class="metrics">
   <div class="container metrics-row">
@@ -111,26 +113,35 @@
         <h2 data-i18n="visitH">Hours</h2>
       </div>
       <table class="hours-table">
-        <tr data-day="mon"><td data-i18n="dayMon">Monday</td><td data-i18n="closed">Closed</td></tr>
-        <tr data-day="tue"><td data-i18n="dayTue">Tuesday</td><td>11:00 – 21:00</td></tr>
-        <tr data-day="wed"><td data-i18n="dayWed">Wednesday</td><td>11:00 – 21:00</td></tr>
-        <tr data-day="thu"><td data-i18n="dayThu">Thursday</td><td>11:00 – 21:00</td></tr>
-        <tr data-day="fri"><td data-i18n="dayFri">Friday</td><td>11:00 – 22:30</td></tr>
-        <tr data-day="sat"><td data-i18n="daySat">Saturday</td><td>11:00 – 22:30</td></tr>
-        <tr data-day="sun"><td data-i18n="daySun">Sunday</td><td data-i18n="brunch">10:00 – 15:00 brunch</td></tr>
+        <caption data-i18n="hoursCaption">Operating Hours</caption>
+        <thead>
+          <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr data-day="mon"><th scope="row" data-i18n="dayMon">Monday</th><td data-i18n="closed">Closed</td></tr>
+          <tr data-day="tue"><th scope="row" data-i18n="dayTue">Tuesday</th><td>11:00 – 21:00</td></tr>
+          <tr data-day="wed"><th scope="row" data-i18n="dayWed">Wednesday</th><td>11:00 – 21:00</td></tr>
+          <tr data-day="thu"><th scope="row" data-i18n="dayThu">Thursday</th><td>11:00 – 21:00</td></tr>
+          <tr data-day="fri"><th scope="row" data-i18n="dayFri">Friday</th><td>11:00 – 22:30</td></tr>
+          <tr data-day="sat"><th scope="row" data-i18n="daySat">Saturday</th><td>11:00 – 22:30</td></tr>
+          <tr data-day="sun"><th scope="row" data-i18n="daySun">Sunday</th><td data-i18n="brunch">10:00 – 15:00 brunch</td></tr>
+        </tbody>
       </table>
     </div>
     <div>
       <div class="section-head" style="margin-bottom:28px;">
         <h2 data-i18n="findH">Find us</h2>
       </div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="lbl" data-i18n="lblAddress">ADDRESS</span><a href="#" data-demo-action="directions" data-i18n="addr">806 S St Mary's St, San Antonio, TX 78205</a></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="lbl" data-i18n="lblAddress">ADDRESS</span><a href="https://maps.google.com/?q=123+Navarro+St+San+Antonio+TX" target="_blank" rel="noopener" class="info-line-val" data-i18n="valAddr">123 Navarro St, San Antonio, TX 78205</a></div></div>
       <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><div><span class="lbl" data-i18n="lblPhone">PHONE</span><a href="tel:+12105550177" data-i18n="phone">(210) 555-0177</a></div></div>
       <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-8-8 18-2.5-7.5z"/></svg><div><span class="lbl" data-i18n="lblOrder">PICKUP</span><span data-i18n="order">Order ahead — ready in about 25 minutes</span></div></div>
       <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg><div><span class="lbl" data-i18n="lblGroup">GROUPS</span><span data-i18n="groups">Tables of 6+ — call ahead and we'll set the patio</span></div></div>
     </div>
   </div>
 </section>
+
+<div class="demo-badge" data-i18n="demo_badge">DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio</div>
+</main>
 
 <footer class="footer">
   <div class="container footer-inner">
@@ -179,7 +190,9 @@ window.I18N = {
     lblOrder: "PICKUP", order: "Order ahead — ready in about 25 minutes",
     lblGroup: "GROUPS", groups: "Tables of 6+ — call ahead and we'll set the patio",
     footP: "© 2026 Casa Verde Cocina · Demo site — business name, photos and data are illustrative.",
-    backGallery: "Back to demo gallery", abCall: "Call now", abOrder: "Order pickup"
+    backGallery: "Back to demo gallery", abCall: "Call now", abOrder: "Order pickup",
+    hoursCaption: "Operating Hours",
+    demo_badge: "DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio"
   },
   es: {
     navMenu: "Menú", navReviews: "Reseñas", navVisit: "Horarios y ubicación", navOrder: "Pedir", otherLang: "EN",
@@ -214,7 +227,9 @@ window.I18N = {
     lblOrder: "RECOGER", order: "Pida con anticipación — listo en unos 25 minutos",
     lblGroup: "GRUPOS", groups: "Mesas de 6+ — llame con anticipación y preparamos el patio",
     footP: "© 2026 Casa Verde Cocina · Sitio demo — nombre, fotos y datos son ilustrativos.",
-    backGallery: "Volver a la galería", abCall: "Llamar", abOrder: "Pedir"
+    backGallery: "Volver a la galería", abCall: "Llamar", abOrder: "Pedir",
+    hoursCaption: "Horario de atención",
+    demo_badge: "VISTA PREVIA DEMO — Perfil comercial ficticio creado por OKComputer Web Studio"
   }
 };
 </script>
