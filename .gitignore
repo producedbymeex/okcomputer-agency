@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Environment
+.env
+.env.*
+
+# Build output
+dist/
+build/
+
+# Deployment
+.vercel/
