@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
-<style>:root { --accent: #10b981; }</style>
+<style>:root { --accent: #2563eb; }</style>
 </head>
-<body>
+<body class="theme-contractor">
 
 <nav class="nav">
   <div class="container nav-inner">
@@ -24,10 +24,16 @@
     </div>
     <div class="nav-right">
       <button type="button" class="lang-toggle"><span class="active-lang">EN</span>&nbsp;/&nbsp;<span data-i18n="otherLang">ES</span></button>
-      <a class="btn btn-primary btn-sm" href="tel:+12105550192" data-i18n="navCall">Call</a>
+      <a class="btn btn-call btn-sm" href="tel:+12105550192"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><span data-i18n="navCall">Call</span></a>
     </div>
   </div>
 </nav>
+
+<div class="demo-disclosure">
+  <div class="container"><span class="dot"></span><span data-i18n="demoDisclosure">DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio</span></div>
+</div>
+
+<main id="main-content">
 
 <header class="hero" id="top">
   <div class="container hero-grid">
@@ -36,11 +42,19 @@
       <h1 data-i18n="h1">AC out in a San Antonio summer? We're on it today.</h1>
       <p class="lede" data-i18n="lede">Same-day repair, honest flat-rate quotes, and installs done right the first time. Servicing Bexar County homes since 2011.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#quote"><span data-i18n="ctaQuote">Get a free quote</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="tel:+12105550192" data-i18n="ctaCall">Call (210) 555-0192</a>
+        <a class="btn btn-primary" href="#quote"><span data-i18n="ctaQuote">Get a free quote</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-call-out" href="tel:+12105550192"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><span data-i18n="ctaCall">Call (210) 555-0192</span></a>
+      </div>
+      <div class="hero-badges">
+        <div class="trust-badge rating">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.4 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <strong>4.9</strong><span data-i18n="ratingBadge">Google rating · 341 reviews</span>
+        </div>
+        <div class="trust-badge emergency">
+          <span class="pulse"></span><span data-i18n="emergencyBadge">24/7 emergency response</span>
+        </div>
       </div>
       <div class="hero-trust">
-        <div class="trust-item"><strong>4.8</strong> <span data-i18n="trust1">★ 341 Google reviews</span></div>
         <div class="trust-item"><strong data-i18n="trust2v">Same-day</strong> <span data-i18n="trust2">service, 7 days</span></div>
         <div class="trust-item"><strong>TACL</strong> <span data-i18n="trust3">licensed &amp; insured</span></div>
       </div>
@@ -54,7 +68,7 @@
 
 <div class="metrics">
   <div class="container metrics-row">
-    <div class="metric"><div class="metric-value">4.8<span class="unit">/5</span></div><div class="metric-label" data-i18n="m1">Google rating</div></div>
+    <div class="metric"><div class="metric-value">4.9<span class="unit">/5</span></div><div class="metric-label" data-i18n="m1">Google rating</div></div>
     <div class="metric"><div class="metric-value">4,200<span class="unit">+</span></div><div class="metric-label" data-i18n="m2">Jobs completed</div></div>
     <div class="metric"><div class="metric-value">63<span class="unit">min</span></div><div class="metric-label" data-i18n="m3">Avg. same-day response</div></div>
     <div class="metric"><div class="metric-value">10<span class="unit">yr</span></div><div class="metric-label" data-i18n="m4">Parts warranty on installs</div></div>
@@ -117,9 +131,25 @@
         <h2 data-i18n="qH">Get your free quote</h2>
         <p data-i18n="qP">Tell us what's going on — we reply within one business hour, and same-day slots are first-come.</p>
       </div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><div><span class="lbl" data-i18n="lblPhone">PHONE</span><a href="tel:+12105550192" data-i18n="phone">(210) 555-0192</a></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><span class="lbl" data-i18n="lblLic">LICENSE &amp; INSURANCE</span><span data-i18n="lic">TACL #TACLA12345C · $2M liability</span></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><span class="lbl" data-i18n="lblHours">HOURS</span><span data-i18n="hours">Mon–Sat 7:00 – 20:00 · Sun emergency only</span></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><div><span class="lbl" data-i18n="lblPhone">PHONE</span><a href="tel:+12105550192" data-i18n="phone">(210) 555-0192</a></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><span class="lbl" data-i18n="lblLic">LICENSE &amp; INSURANCE</span><span data-i18n="lic">TACL #TACLA12345C · $2M liability</span></div></div>
+      <div class="hours-block">
+        <table class="hours-table">
+          <caption data-i18n="hoursCaption">Business hours</caption>
+          <thead>
+            <tr><th scope="col" data-i18n="thDay">Day</th><th scope="col" data-i18n="thHours">Hours</th></tr>
+          </thead>
+          <tbody>
+            <tr data-day="mon"><th scope="row" data-i18n="dayMon">Monday</th><td>7:00 – 20:00</td></tr>
+            <tr data-day="tue"><th scope="row" data-i18n="dayTue">Tuesday</th><td>7:00 – 20:00</td></tr>
+            <tr data-day="wed"><th scope="row" data-i18n="dayWed">Wednesday</th><td>7:00 – 20:00</td></tr>
+            <tr data-day="thu"><th scope="row" data-i18n="dayThu">Thursday</th><td>7:00 – 20:00</td></tr>
+            <tr data-day="fri"><th scope="row" data-i18n="dayFri">Friday</th><td>7:00 – 20:00</td></tr>
+            <tr data-day="sat"><th scope="row" data-i18n="daySat">Saturday</th><td>7:00 – 20:00</td></tr>
+            <tr data-day="sun"><th scope="row" data-i18n="daySun">Sunday</th><td data-i18n="emergencyOnly">Emergency calls only</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div>
       <form class="form card" data-mock novalidate>
@@ -137,11 +167,12 @@
           <label for="q-svc" data-i18n="fSvc">What do you need?</label>
           <select id="q-svc" required>
             <option value="" data-i18n="opt0">Choose one…</option>
-            <option data-i18n="opt1">AC repair — not cooling</option>
-            <option data-i18n="opt2">AC replacement / new install</option>
-            <option data-i18n="opt3">Maintenance / tune-up</option>
-            <option data-i18n="opt4">Ducts / indoor air quality</option>
-            <option data-i18n="opt5">Something else</option>
+            <option value="ac-repair" data-i18n="opt1">AC repair — not cooling</option>
+            <option value="ac-replacement" data-i18n="opt2">AC replacement / new install</option>
+            <option value="maintenance" data-i18n="opt3">Maintenance / tune-up</option>
+            <option value="ducts" data-i18n="opt4">Ducts / indoor air quality</option>
+            <option value="heating" data-i18n="opt5">Heating / furnace</option>
+            <option value="other" data-i18n="opt6">Something else</option>
           </select>
           <span class="err" data-i18n="errSvc">Please choose a service</span>
         </div>
@@ -149,28 +180,30 @@
           <label for="q-msg" data-i18n="fMsg">Details (optional)</label>
           <textarea id="q-msg" data-i18n-ph="phMsg" placeholder="e.g. Upstairs unit blowing warm since yesterday…"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block"><span data-i18n="fBtn">Request my quote</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button type="submit" class="btn btn-primary btn-block"><span data-i18n="fBtn">Request my quote</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         <p class="note" data-i18n="fNote">In production: this emails the owner and saves every request to a Google Sheet.</p>
       </form>
       <div class="form-success">
-        <div class="big-check" style="width:56px; height:56px; margin:0 auto 18px; border-radius:50%; border:1px solid var(--emerald); display:flex; align-items:center; justify-content:center; color:var(--emerald);"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div class="big-check" style="width:56px; height:56px; margin:0 auto 18px; border-radius:50%; border:1px solid var(--accent); display:flex; align-items:center; justify-content:center; color:var(--accent);"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
         <h3 style="margin-bottom:8px;" data-i18n="okT">Request received</h3>
-        <p style="color:var(--muted); font-size:14px;" data-i18n="okP">We'll call you back within one business hour. Keep your phone close.</p>
+        <p style="font-size:14px;" data-i18n="okP">We'll call you back within one business hour. Keep your phone close.</p>
         <div class="ref"></div>
       </div>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer class="footer">
   <div class="container footer-inner">
     <p data-i18n="footP">© 2026 Alamo Comfort Air · Demo site — business name, photos and data are illustrative.</p>
-    <a class="back-link" href="index.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> <span data-i18n="backGallery">Back to demo gallery</span></a>
+    <a class="back-link" href="index.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> <span data-i18n="backGallery">Back to demo gallery</span></a>
   </div>
 </footer>
 
 <div class="action-bar">
-  <a class="btn btn-ghost" href="tel:+12105550192" data-i18n="abCall">Call now</a>
+  <a class="btn btn-call" href="tel:+12105550192"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><span data-i18n="abCall">Call now</span></a>
   <a class="btn btn-primary" href="#quote" data-i18n="abQuote">Free quote</a>
 </div>
 
@@ -178,11 +211,13 @@
 window.I18N = {
   en: {
     navServices: "Services", navAreas: "Service Areas", navReviews: "Reviews", navQuote: "Free Quote", navCall: "Call", otherLang: "ES",
+    demoDisclosure: "DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio",
     eyebrow: "LICENSED TEXAS HVAC · SAN ANTONIO",
     h1: "AC out in a San Antonio summer? We're on it today.",
     lede: "Same-day repair, honest flat-rate quotes, and installs done right the first time. Servicing Bexar County homes since 2011.",
     ctaQuote: "Get a free quote", ctaCall: "Call (210) 555-0192",
-    trust1: "★ 341 Google reviews", trust2: "service, 7 days", trust2v: "Same-day", trust3: "licensed & insured",
+    ratingBadge: "Google rating · 341 reviews", emergencyBadge: "24/7 emergency response",
+    trust2: "service, 7 days", trust2v: "Same-day", trust3: "licensed & insured",
     badge: "TECHNICIANS AVAILABLE TODAY · UNTIL 8 PM",
     m1: "Google rating", m2: "Jobs completed", m3: "Avg. same-day response", m4: "Parts warranty on installs",
     svcH: "What we do", svcP: "Flat-rate pricing quoted before we start. No overtime fees, ever.",
@@ -198,9 +233,11 @@ window.I18N = {
     r3: "\"El técnico explicó todo en español, precio fijo por adelantado. Muy profesional.\"",
     qH: "Get your free quote", qP: "Tell us what's going on — we reply within one business hour, and same-day slots are first-come.",
     lblPhone: "PHONE", phone: "(210) 555-0192", lblLic: "LICENSE & INSURANCE", lic: "TACL #TACLA12345C · $2M liability",
-    lblHours: "HOURS", hours: "Mon–Sat 7:00 – 20:00 · Sun emergency only",
+    hoursCaption: "Business hours", thDay: "Day", thHours: "Hours",
+    dayMon: "Monday", dayTue: "Tuesday", dayWed: "Wednesday", dayThu: "Thursday", dayFri: "Friday", daySat: "Saturday", daySun: "Sunday",
+    emergencyOnly: "Emergency calls only",
     fName: "Full name", fPhone: "Phone", fSvc: "What do you need?", opt0: "Choose one…",
-    opt1: "AC repair — not cooling", opt2: "AC replacement / new install", opt3: "Maintenance / tune-up", opt4: "Ducts / indoor air quality", opt5: "Something else",
+    opt1: "AC repair — not cooling", opt2: "AC replacement / new install", opt3: "Maintenance / tune-up", opt4: "Ducts / indoor air quality", opt5: "Heating / furnace", opt6: "Something else",
     fMsg: "Details (optional)", phMsg: "e.g. Upstairs unit blowing warm since yesterday…",
     fBtn: "Request my quote", fNote: "In production: this emails the owner and saves every request to a Google Sheet.",
     errName: "Please enter your name", errPhone: "Enter a valid phone number", errSvc: "Please choose a service",
@@ -210,11 +247,13 @@ window.I18N = {
   },
   es: {
     navServices: "Servicios", navAreas: "Zonas", navReviews: "Reseñas", navQuote: "Cotización", navCall: "Llamar", otherLang: "EN",
+    demoDisclosure: "VISTA PREVIA — Perfil de negocio ficticio creado por OKComputer Web Studio",
     eyebrow: "AIRE ACONDICIONADO CON LICENCIA TEXAS · SAN ANTONIO",
     h1: "¿Se dañó el aire en pleno verano de San Antonio? Hoy lo resolvemos.",
     lede: "Reparación el mismo día, cotizaciones fijas y honestas, e instalaciones bien hechas a la primera. En casas del condado de Bexar desde 2011.",
     ctaQuote: "Cotización gratis", ctaCall: "Llamar (210) 555-0192",
-    trust1: "★ 341 reseñas de Google", trust2: "servicio, 7 días", trust2v: "Mismo día", trust3: "con licencia y seguro",
+    ratingBadge: "Calificación de Google · 341 reseñas", emergencyBadge: "Respuesta de emergencia 24/7",
+    trust2: "servicio, 7 días", trust2v: "Mismo día", trust3: "con licencia y seguro",
     badge: "TÉCNICOS DISPONIBLES HOY · HASTA LAS 8 PM",
     m1: "Calificación en Google", m2: "Trabajos completados", m3: "Respuesta promedio el mismo día", m4: "Garantía de piezas en instalaciones",
     svcH: "Qué hacemos", svcP: "Precios fijos cotizados antes de empezar. Sin cargos por horas extra, nunca.",
@@ -230,9 +269,11 @@ window.I18N = {
     r3: "\"El técnico explicó todo en español, precio fijo por adelantado. Muy profesional.\"",
     qH: "Su cotización gratis", qP: "Cuéntenos qué pasa — respondemos en una hora hábil, y los turnos del día son por orden de llegada.",
     lblPhone: "TELÉFONO", phone: "(210) 555-0192", lblLic: "LICENCIA Y SEGURO", lic: "TACL #TACLA12345C · $2M de responsabilidad",
-    lblHours: "HORARIOS", hours: "Lun–Sáb 7:00 – 20:00 · Dom solo emergencias",
+    hoursCaption: "Horario de atención", thDay: "Día", thHours: "Horario",
+    dayMon: "Lunes", dayTue: "Martes", dayWed: "Miércoles", dayThu: "Jueves", dayFri: "Viernes", daySat: "Sábado", daySun: "Domingo",
+    emergencyOnly: "Solo llamadas de emergencia",
     fName: "Nombre completo", fPhone: "Teléfono", fSvc: "¿Qué necesita?", opt0: "Elija una opción…",
-    opt1: "Reparación — no enfría", opt2: "Reemplazo / instalación nueva", opt3: "Mantenimiento / ajuste", opt4: "Ductos / calidad de aire", opt5: "Otro",
+    opt1: "Reparación — no enfría", opt2: "Reemplazo / instalación nueva", opt3: "Mantenimiento / ajuste", opt4: "Ductos / calidad de aire", opt5: "Calefacción / caldera", opt6: "Otro",
     fMsg: "Detalles (opcional)", phMsg: "p. ej., La unidad de arriba sopla tibio desde ayer…",
     fBtn: "Solicitar cotización", fNote: "En producción: esto envía un correo al dueño y guarda cada solicitud en una hoja de Google.",
     errName: "Ingrese su nombre", errPhone: "Ingrese un número válido", errSvc: "Elija un servicio",

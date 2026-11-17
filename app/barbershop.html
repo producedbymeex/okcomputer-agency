@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
-<style>:root { --accent: #10b981; }</style>
+<style>:root { --accent: #c5a059; }</style>
 </head>
-<body>
+<body class="theme-barbershop">
 
 <nav class="nav">
   <div class="container nav-inner">
@@ -29,6 +29,12 @@
   </div>
 </nav>
 
+<div class="demo-disclosure">
+  <div class="container"><span class="dot"></span><span data-i18n="demoDisclosure">DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio</span></div>
+</div>
+
+<main id="main-content">
+
 <header class="hero" id="top">
   <div class="container hero-grid">
     <div>
@@ -36,8 +42,8 @@
       <h1 data-i18n="h1">Sharp fades. Zero wait. Booked in 30 seconds.</h1>
       <p class="lede" data-i18n="lede">Southtown's chair since 2018. Walk-ins when the light is on — booked cuts always get the chair on time.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#book"><span data-i18n="ctaBook">Book a chair</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="tel:+12105550143" data-i18n="ctaCall">Call (210) 555-0143</a>
+        <a class="btn btn-primary" href="#book"><span data-i18n="ctaBook">Book a chair</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-call-out" href="tel:+12105550143"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><span data-i18n="ctaCall">Call (210) 555-0143</span></a>
       </div>
       <div class="hero-trust">
         <div class="trust-item"><strong>4.9</strong> <span data-i18n="trust1">★ 212 Google reviews</span></div>
@@ -84,9 +90,9 @@
       <p data-i18n="teamP">Three barbers, one standard: you leave sharper than you planned to.</p>
     </div>
     <div class="grid-3">
-      <div class="card"><span class="mono" style="display:block; width:48px; height:48px; border:1px solid var(--border-strong); border-radius:8px; text-align:center; line-height:48px; margin-bottom:16px; color:var(--emerald);">MD</span><h3>Marcus "Fade" Delgado</h3><p data-i18n="t1p">Owner · 11 years behind the chair. Skin fades and shear work. Habla español.</p></div>
-      <div class="card"><span class="mono" style="display:block; width:48px; height:48px; border:1px solid var(--border-strong); border-radius:8px; text-align:center; line-height:48px; margin-bottom:16px; color:var(--emerald);">CO</span><h3>Chris Ortega</h3><p data-i18n="t2p">Beard specialist · hot towel shaves and sculpting. Saturdays book out first.</p></div>
-      <div class="card"><span class="mono" style="display:block; width:48px; height:48px; border:1px solid var(--border-strong); border-radius:8px; text-align:center; line-height:48px; margin-bottom:16px; color:var(--emerald);">JK</span><h3>Jay Kim</h3><p data-i18n="t3p">Fades and kids' cuts · the patient one. Walk-in favorite Tuesday–Thursday.</p></div>
+      <div class="card"><span class="mono" style="display:block; width:48px; height:48px; border:1px solid var(--border-strong); border-radius:8px; text-align:center; line-height:48px; margin-bottom:16px; color:var(--accent);">MD</span><h3>Marcus "Fade" Delgado</h3><p data-i18n="t1p">Owner · 11 years behind the chair. Skin fades and shear work. Habla español.</p></div>
+      <div class="card"><span class="mono" style="display:block; width:48px; height:48px; border:1px solid var(--border-strong); border-radius:8px; text-align:center; line-height:48px; margin-bottom:16px; color:var(--accent);">CO</span><h3>Chris Ortega</h3><p data-i18n="t2p">Beard specialist · hot towel shaves and sculpting. Saturdays book out first.</p></div>
+      <div class="card"><span class="mono" style="display:block; width:48px; height:48px; border:1px solid var(--border-strong); border-radius:8px; text-align:center; line-height:48px; margin-bottom:16px; color:var(--accent);">JK</span><h3>Jay Kim</h3><p data-i18n="t3p">Fades and kids' cuts · the patient one. Walk-in favorite Tuesday–Thursday.</p></div>
     </div>
   </div>
 </section>
@@ -111,7 +117,7 @@
       <h2 data-i18n="bookH">Book your chair</h2>
       <p data-i18n="bookP">Pick a service and a time — you'll get a text confirmation. Free cancellation up to 2 hours before.</p>
     </div>
-    <div id="booking-root"></div>
+    <div id="booking-root" data-closed-day="1"></div>
     <p class="note" data-i18n="bookNote">DEMO — in production this connects to the shop's own Google Calendar or Calendly.</p>
   </div>
 </section>
@@ -123,36 +129,44 @@
         <h2 data-i18n="visitH">Hours &amp; location</h2>
       </div>
       <table class="hours-table">
-        <tr data-day="mon"><td data-i18n="dayMon">Monday</td><td data-i18n="closed">Closed</td></tr>
-        <tr data-day="tue"><td data-i18n="dayTue">Tuesday</td><td>9:00 – 19:00</td></tr>
-        <tr data-day="wed"><td data-i18n="dayWed">Wednesday</td><td>9:00 – 19:00</td></tr>
-        <tr data-day="thu"><td data-i18n="dayThu">Thursday</td><td>9:00 – 19:00</td></tr>
-        <tr data-day="fri"><td data-i18n="dayFri">Friday</td><td>9:00 – 19:00</td></tr>
-        <tr data-day="sat"><td data-i18n="daySat">Saturday</td><td>8:00 – 18:00</td></tr>
-        <tr data-day="sun"><td data-i18n="daySun">Sunday</td><td>10:00 – 16:00</td></tr>
+        <caption data-i18n="hoursCaption">Business hours</caption>
+        <thead>
+          <tr><th scope="col" data-i18n="thDay">Day</th><th scope="col" data-i18n="thHours">Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr data-day="mon"><th scope="row" data-i18n="dayMon">Monday</th><td data-i18n="closed">Closed</td></tr>
+          <tr data-day="tue"><th scope="row" data-i18n="dayTue">Tuesday</th><td>9:00 – 19:00</td></tr>
+          <tr data-day="wed"><th scope="row" data-i18n="dayWed">Wednesday</th><td>9:00 – 19:00</td></tr>
+          <tr data-day="thu"><th scope="row" data-i18n="dayThu">Thursday</th><td>9:00 – 19:00</td></tr>
+          <tr data-day="fri"><th scope="row" data-i18n="dayFri">Friday</th><td>9:00 – 19:00</td></tr>
+          <tr data-day="sat"><th scope="row" data-i18n="daySat">Saturday</th><td>8:00 – 18:00</td></tr>
+          <tr data-day="sun"><th scope="row" data-i18n="daySun">Sunday</th><td>10:00 – 16:00</td></tr>
+        </tbody>
       </table>
     </div>
     <div>
       <div class="section-head" style="margin-bottom:28px;">
         <h2 data-i18n="findH">Find us</h2>
       </div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="lbl" data-i18n="lblAddress">ADDRESS</span><a href="https://www.google.com/maps/search/?api=1&query=1127+S+Presa+St+San+Antonio+TX+78210" target="_blank" rel="noopener" data-i18n="addr">1127 S Presa St, San Antonio, TX 78210</a></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><div><span class="lbl" data-i18n="lblPhone">PHONE</span><a href="tel:+12105550143" data-i18n="phone">(210) 555-0143</a></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><span class="lbl" data-i18n="lblWalk">WALK-INS</span><span data-i18n="walkin">Welcome when the green light is on</span></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-8-8 18-2.5-7.5z"/></svg><div><span class="lbl" data-i18n="lblPark">PARKING</span><span data-i18n="park">Free lot behind the building off Labor St</span></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="lbl" data-i18n="lblAddress">ADDRESS</span><a href="https://www.google.com/maps/search/?api=1&query=1127+S+Presa+St+San+Antonio+TX+78210" target="_blank" rel="noopener" data-i18n="addr">1127 S Presa St, San Antonio, TX 78210</a></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><div><span class="lbl" data-i18n="lblPhone">PHONE</span><a href="tel:+12105550143" data-i18n="phone">(210) 555-0143</a></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><span class="lbl" data-i18n="lblWalk">WALK-INS</span><span data-i18n="walkin">Welcome when the green light is on</span></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l18-8-8 18-2.5-7.5z"/></svg><div><span class="lbl" data-i18n="lblPark">PARKING</span><span data-i18n="park">Free lot behind the building off Labor St</span></div></div>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer class="footer">
   <div class="container footer-inner">
     <p data-i18n="footP">© 2026 Southtown Fade Co. · Demo site — business name, photos and data are illustrative.</p>
-    <a class="back-link" href="index.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> <span data-i18n="backGallery">Back to demo gallery</span></a>
+    <a class="back-link" href="index.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> <span data-i18n="backGallery">Back to demo gallery</span></a>
   </div>
 </footer>
 
 <div class="action-bar">
-  <a class="btn btn-ghost" href="tel:+12105550143" data-i18n="abCall">Call now</a>
+  <a class="btn btn-call" href="tel:+12105550143"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><span data-i18n="abCall">Call now</span></a>
   <a class="btn btn-primary" href="#book" data-i18n="abBook">Book a chair</a>
 </div>
 
@@ -165,12 +179,13 @@ window.DEMO_SERVICES = [
   { name: "Kids Cut (12 & under)", duration: "30 min", price: "$25" }
 ];
 window.DEMO_BOOKING_TEXT = {
-  en: { step1: "SERVICE", step2: "TIME", step3: "DETAILS", s1t: "Choose your service", s1h: "Prices include the full finish — neck shave and styling included.", s2t: "Pick a time", s2h: "Today and tomorrow's live availability.", s3t: "Your details", s3h: "We text a confirmation within minutes.", svc: "SERVICE:", time: "TIME:", next: "Continue", back: "Back", name: "Full name", phone: "Mobile phone", errName: "Please enter your name", errPhone: "Enter a valid phone number", confirm: "Confirm booking", doneT: "You're on the books", doneP: "Demo confirmation — in production you'd get a text and a calendar invite now.", again: "Book another" },
-  es: { step1: "SERVICIO", step2: "HORA", step3: "DATOS", s1t: "Elija su servicio", s1h: "Los precios incluyen el acabado completo.", s2t: "Elija una hora", s2h: "Disponibilidad de hoy y mañana.", s3t: "Sus datos", s3h: "Le enviamos un mensaje de confirmación en minutos.", svc: "SERVICIO:", time: "HORA:", next: "Continuar", back: "Atrás", name: "Nombre completo", phone: "Teléfono móvil", errName: "Ingrese su nombre", errPhone: "Ingrese un número válido", confirm: "Confirmar cita", doneT: "Cita registrada", doneP: "Confirmación de demo — en producción recibiría un mensaje y una invitación de calendario.", again: "Reservar otra" }
+  en: { step1: "SERVICE", step2: "TIME", step3: "DETAILS", s1t: "Choose your service", s1h: "Prices include the full finish — neck shave and styling included.", s2t: "Pick a time", s2h: "Today and tomorrow's live availability.", closedDay: "Closed Mondays — booking opens Tuesday through Sunday.", s3t: "Your details", s3h: "We text a confirmation within minutes.", svc: "SERVICE:", time: "TIME:", next: "Continue", back: "Back", name: "Full name", phone: "Mobile phone", errName: "Please enter your name", errPhone: "Enter a valid phone number", confirm: "Confirm booking", doneT: "You're on the books", doneP: "Demo confirmation — in production you'd get a text and a calendar invite now.", again: "Book another" },
+  es: { step1: "SERVICIO", step2: "HORA", step3: "DATOS", s1t: "Elija su servicio", s1h: "Los precios incluyen el acabado completo.", s2t: "Elija una hora", s2h: "Disponibilidad de hoy y mañana.", closedDay: "Cerrado los lunes — reserve de martes a domingo.", s3t: "Sus datos", s3h: "Le enviamos un mensaje de confirmación en minutos.", svc: "SERVICIO:", time: "HORA:", next: "Continuar", back: "Atrás", name: "Nombre completo", phone: "Teléfono móvil", errName: "Ingrese su nombre", errPhone: "Ingrese un número válido", confirm: "Confirmar cita", doneT: "Cita registrada", doneP: "Confirmación de demo — en producción recibiría un mensaje y una invitación de calendario.", again: "Reservar otra" }
 };
 window.I18N = {
   en: {
     navServices: "Services", navBarbers: "Barbers", navReviews: "Reviews", navVisit: "Visit", navBook: "Book", otherLang: "ES",
+    demoDisclosure: "DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio",
     eyebrow: "SOUTHTOWN · SAN ANTONIO, TX",
     h1: "Sharp fades. Zero wait. Booked in 30 seconds.",
     lede: "Southtown's chair since 2018. Walk-ins when the light is on — booked cuts always get the chair on time.",
@@ -195,6 +210,7 @@ window.I18N = {
     bookH: "Book your chair", bookP: "Pick a service and a time — you'll get a text confirmation. Free cancellation up to 2 hours before.",
     bookNote: "DEMO — in production this connects to the shop's own Google Calendar or Calendly.",
     visitH: "Hours & location", findH: "Find us",
+    hoursCaption: "Business hours", thDay: "Day", thHours: "Hours",
     dayMon: "Monday", dayTue: "Tuesday", dayWed: "Wednesday", dayThu: "Thursday", dayFri: "Friday", daySat: "Saturday", daySun: "Sunday", closed: "Closed",
     lblAddress: "ADDRESS", addr: "1127 S Presa St, San Antonio, TX 78210", lblPhone: "PHONE", phone: "(210) 555-0143",
     lblWalk: "WALK-INS", walkin: "Welcome when the green light is on", lblPark: "PARKING", park: "Free lot behind the building off Labor St",
@@ -203,6 +219,7 @@ window.I18N = {
   },
   es: {
     navServices: "Servicios", navBarbers: "Barberos", navReviews: "Reseñas", navVisit: "Visítanos", navBook: "Cita", otherLang: "EN",
+    demoDisclosure: "VISTA PREVIA — Perfil de negocio ficticio creado por OKComputer Web Studio",
     eyebrow: "SOUTHTOWN · SAN ANTONIO, TX",
     h1: "Cortes precisos. Sin espera. Cita en 30 segundos.",
     lede: "La silla de Southtown desde 2018. Sin cita cuando el letrero está encendido — con cita, la silla le espera a tiempo.",
@@ -227,6 +244,7 @@ window.I18N = {
     bookH: "Reserve su silla", bookP: "Elija servicio y hora — recibirá confirmación por mensaje. Cancelación gratis hasta 2 horas antes.",
     bookNote: "DEMO — en producción esto se conecta al Google Calendar o Calendly de la barbería.",
     visitH: "Horarios y ubicación", findH: "Encuéntrenos",
+    hoursCaption: "Horario de atención", thDay: "Día", thHours: "Horario",
     dayMon: "Lunes", dayTue: "Martes", dayWed: "Miércoles", dayThu: "Jueves", dayFri: "Viernes", daySat: "Sábado", daySun: "Domingo", closed: "Cerrado",
     lblAddress: "DIRECCIÓN", addr: "1127 S Presa St, San Antonio, TX 78210", lblPhone: "TELÉFONO", phone: "(210) 555-0143",
     lblWalk: "SIN CITA", walkin: "Bienvenidos cuando el letrero verde está encendido", lblPark: "ESTACIONAMIENTO", park: "Lote gratis detrás del edificio por Labor St",

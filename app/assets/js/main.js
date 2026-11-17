@@ -113,9 +113,13 @@
     var T = function (key) { var d = L[current] || L.en || {}; return d[key] || key; };
 
     var times = [];
-    for (var h = 9; h <= 18; h++) {
-      times.push(h + ":00");
-      if (h < 18) times.push(h + ":30");
+    var closedDay = parseInt(root.getAttribute("data-closed-day"), 10);
+    var isClosedToday = !isNaN(closedDay) && new Date().getDay() === closedDay;
+    if (!isClosedToday) {
+      for (var h = 9; h <= 18; h++) {
+        times.push(h + ":00");
+        if (h < 18) times.push(h + ":30");
+      }
     }
     var taken = { "10:00": 1, "11:30": 1, "13:00": 1, "15:30": 1, "16:00": 1 };
 
@@ -153,7 +157,10 @@
           '<div class="bk-nav"><span></span><button type="button" class="btn btn-primary" data-next disabled>' + T("next") + ' <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>';
       }
       if (s === 1) {
-        return "<h3>" + T("s2t") + '</h3><p class="hint">' + T("s2h") + '</p><div class="slot-grid">' + slotGrid() + "</div>" +
+        var slots = times.length
+          ? '<div class="slot-grid">' + slotGrid() + "</div>"
+          : '<p class="closed-note">' + T("closedDay") + "</p>";
+        return "<h3>" + T("s2t") + '</h3><p class="hint">' + T("s2h") + "</p>" + slots +
           '<div class="bk-nav"><button type="button" class="btn btn-ghost btn-sm" data-back>' + T("back") + '</button><button type="button" class="btn btn-primary" data-next disabled>' + T("next") + ' <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>';
       }
       if (s === 2) {

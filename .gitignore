@@ -14,3 +14,5 @@ build/
 
 # Deployment
 .vercel/
+contractor-*.png
+screenshot-*.png

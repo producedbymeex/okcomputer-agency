@@ -592,3 +592,219 @@ a { color: inherit; text-decoration: none; }
 .ok-ref { margin: 18px 0 22px; }
 .ok-ref .lbl { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--faint); margin-bottom: 4px; }
 
+
+/* ============================================================
+   Shared: hours table semantics, demo disclosure, trust badges
+   ============================================================ */
+.hours-table caption {
+  caption-side: bottom;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+  padding-top: 10px;
+}
+.hours-table th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.hours-table thead th {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.hours-table thead th:last-child { text-align: right; }
+.hours-table tbody th { color: var(--text); }
+.hours-table tr.today th { color: var(--accent, var(--emerald)); }
+.hours-block { margin-top: 18px; }
+
+.demo-disclosure {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+}
+.demo-disclosure .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.demo-disclosure .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent, var(--emerald));
+  flex-shrink: 0;
+}
+
+.hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: rgba(255, 255, 255, 0.04);
+}
+.trust-badge strong { font-size: 14px; font-weight: 700; }
+
+.btn-call {
+  background: var(--accent, var(--emerald));
+  border-color: var(--accent, var(--emerald));
+  color: #1a1408;
+}
+.btn-call:hover { filter: brightness(1.08); }
+.btn-call-out {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+}
+.btn-call-out svg { color: var(--accent, var(--emerald)); }
+.btn-call-out:hover { border-color: var(--accent, var(--emerald)); }
+
+.closed-note {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  padding: 18px;
+  font-size: 14px;
+  color: var(--muted);
+  background: var(--surface);
+  text-align: center;
+}
+
+/* ============================================================
+   Theme: Alamo Comfort Air (contractor)
+   Deep navy canvas · white card surfaces · royal blue · red CTAs
+   ============================================================ */
+.theme-contractor {
+  --bg: #0f172a;
+  --surface: #ffffff;
+  --surface-2: #f1f5fd;
+  --border: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.26);
+  --text: #ffffff;
+  --muted: #b8c4da;
+  --faint: #8b9ab5;
+  --accent: #2563eb;
+  --accent-ink: #7cb0fb;
+  --cta-red: #dc2626;
+  --ink: #0f172a;
+  --ink-muted: #475569;
+  --ink-border: rgba(15, 23, 42, 0.14);
+  background: var(--bg);
+}
+.theme-contractor .nav { background: rgba(15, 23, 42, 0.9); }
+.theme-contractor .action-bar { background: rgba(15, 23, 42, 0.94); }
+.theme-contractor .hero-badge { background: rgba(15, 23, 42, 0.86); border-color: rgba(255, 255, 255, 0.18); }
+.theme-contractor .brand-dot { background: var(--accent-ink); }
+.theme-contractor .eyebrow { color: var(--accent-ink); }
+.theme-contractor .eyebrow::before { background: var(--accent-ink); }
+.theme-contractor .metric-value .unit { color: var(--accent-ink); }
+.theme-contractor .btn-primary { background: var(--cta-red); border-color: var(--cta-red); color: #ffffff; }
+.theme-contractor .btn-call { background: var(--cta-red); border-color: var(--cta-red); color: #ffffff; }
+.theme-contractor .btn-call-out { background: #ffffff; border-color: #ffffff; color: var(--ink); }
+.theme-contractor .btn-call-out svg { color: var(--cta-red); }
+.theme-contractor .btn-call-out:hover { border-color: #ffffff; filter: brightness(0.97); }
+.theme-contractor .row-item:hover { background: rgba(255, 255, 255, 0.06); }
+.theme-contractor .row-desc { color: var(--muted); }
+.theme-contractor .row-sub { color: var(--faint); }
+.theme-contractor .tpl-feats span { border-color: rgba(255, 255, 255, 0.22); color: var(--muted); }
+.theme-contractor .info-line a:hover { color: var(--accent-ink); }
+.theme-contractor .hours-table tr.today th,
+.theme-contractor .hours-table tr.today td { color: var(--accent-ink); }
+.theme-contractor .demo-disclosure { background: rgba(255, 255, 255, 0.06); color: var(--muted); }
+
+/* white surfaces need dark ink */
+.theme-contractor .card { background: #ffffff; border-color: var(--ink-border); color: var(--ink); }
+.theme-contractor .card h3,
+.theme-contractor .card blockquote { color: var(--ink); }
+.theme-contractor .card p,
+.theme-contractor .card .who,
+.theme-contractor .card .who strong { color: var(--ink-muted); }
+.theme-contractor .card .stars { color: #d97706; }
+.theme-contractor .field label { color: var(--ink); }
+.theme-contractor .field input,
+.theme-contractor .field select,
+.theme-contractor .field textarea {
+  background: #f8fafc;
+  color: var(--ink);
+  border-color: var(--ink-border);
+}
+.theme-contractor .field input::placeholder,
+.theme-contractor .field textarea::placeholder { color: #7c8899; }
+.theme-contractor .field .err { color: var(--cta-red); }
+.theme-contractor .form .note { color: #64718a; }
+.theme-contractor .form-success { background: #ffffff; border-color: var(--accent); color: var(--ink); }
+.theme-contractor .form-success p { color: var(--ink-muted); }
+.theme-contractor .trust-badge { background: #ffffff; border-color: var(--ink-border); color: var(--ink); }
+.theme-contractor .trust-badge strong { color: var(--ink); }
+.theme-contractor .trust-badge.rating svg { color: #f59e0b; }
+.theme-contractor .trust-badge.emergency { background: #fff5f5; border-color: #f3c9c9; color: #991b1b; }
+.theme-contractor .trust-badge.emergency .pulse { background: var(--cta-red); }
+
+/* ============================================================
+   Theme: Southtown Fade Co. (barbershop)
+   Heritage atelier · dark vintage · brass · premium service cards
+   ============================================================ */
+.theme-barbershop {
+  --bg: #141210;
+  --surface: #1b1815;
+  --surface-2: #221e19;
+  --border: rgba(197, 160, 89, 0.18);
+  --border-strong: rgba(197, 160, 89, 0.34);
+  --text: #f3ede2;
+  --muted: #b8ab95;
+  --faint: #8a7d68;
+  --accent: #c5a059;
+  background: var(--bg);
+}
+.theme-barbershop .nav { background: rgba(20, 18, 16, 0.9); }
+.theme-barbershop .action-bar { background: rgba(20, 18, 16, 0.95); }
+.theme-barbershop .hero-badge { background: rgba(20, 18, 16, 0.86); }
+.theme-barbershop .btn-primary { color: #1a1408; }
+.theme-barbershop .btn-call { background: var(--accent); border-color: var(--accent); color: #1a1408; }
+.theme-barbershop .slot.sel { color: #1a1408; }
+.theme-barbershop .card { background: var(--surface); border-color: var(--border); }
+.theme-barbershop .demo-disclosure { background: rgba(197, 160, 89, 0.06); }
+.theme-barbershop .info-line a:hover { color: var(--accent); }
+.theme-barbershop .hours-table tr.today th,
+.theme-barbershop .hours-table tr.today td { color: var(--accent); }
+
+/* premium grooming service cards */
+.theme-barbershop .rows { border-top: 0; display: grid; gap: 10px; }
+.theme-barbershop .row-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-bottom: 0;
+  transition: background 160ms var(--ease), border-color 160ms var(--ease), padding 160ms var(--ease), transform 160ms var(--ease);
+}
+.theme-barbershop .row-item:hover {
+  background: var(--surface-2);
+  border-color: var(--border-strong);
+  padding-left: 22px;
+  padding-right: 22px;
+  transform: translateY(-1px);
+}
+.theme-barbershop .row-price { color: var(--accent); }
+.theme-barbershop .row-desc { color: var(--muted); }
+
+/* theme refinements */
+.theme-contractor .hero-media img { object-position: 62% top; }
+.theme-contractor .metrics-row,
+.theme-barbershop .metrics-row { background-clip: content-box; }
