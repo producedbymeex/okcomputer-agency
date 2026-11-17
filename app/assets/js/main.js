@@ -35,6 +35,10 @@
       var key = el.getAttribute("data-i18n-ph");
       if (dict[key] !== undefined) el.setAttribute("placeholder", dict[key]);
     });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-alt");
+      if (dict[key] !== undefined) el.setAttribute("alt", dict[key]);
+    });
     document.querySelectorAll(".lang-toggle").forEach(function (btn) {
       var h = btn.querySelector(".active-lang");
       if (h) h.textContent = lang.toUpperCase();
@@ -58,6 +62,15 @@
     if (row) row.classList.add("today");
   }
 
+  /* ---------------- Field validation ---------------- */
+  function validateField(el) {
+    var value = (el.value || "").trim();
+    var valid = el.hasAttribute("required") ? value.length > 0 : true;
+    if (valid && value && el.type === "email") valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    if (valid && value && el.type === "tel") valid = /^[\d\s()+\-.]{7,}$/.test(value);
+    return valid;
+  }
+
   /* ---------------- Form validation (mock submit) ---------------- */
   function initForms() {
     document.querySelectorAll("form[data-mock]").forEach(function (form) {
@@ -66,9 +79,7 @@
         var ok = true;
         form.querySelectorAll("[required]").forEach(function (input) {
           var field = input.closest(".field");
-          var valid = input.value.trim().length > 0;
-          if (valid && input.type === "tel") valid = /^[\d\s()+\-.]{7,}$/.test(input.value.trim());
-          if (valid && input.type === "email") valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+          var valid = validateField(input);
           field.classList.toggle("invalid", !valid);
           if (!valid) ok = false;
         });
@@ -224,11 +235,115 @@
     toast((msgs[key] || {})[lang] || key);
   });
 
+  /* ---------------- Mobile navigation ---------------- */
+  function initNav() {
+    var toggle = document.querySelector(".nav-toggle");
+    var links = document.querySelector(".nav-links");
+    if (!toggle || !links) return;
+
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("nav-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    links.addEventListener("click", function (e) {
+      if (!e.target.closest("a")) return;
+      links.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  /* ---------------- Project inquiry form ---------------- */
+  function initInquiry() {
+    var form = document.getElementById("inquiry-form");
+    if (!form) return;
+
+    var success = document.getElementById("inquiry-success");
+    var again = document.getElementById("inquiry-again");
+
+    function fieldOf(el) { return el.closest(".field"); }
+
+    function validate() {
+      var ok = true;
+      form.querySelectorAll("input, select, textarea").forEach(function (el) {
+        var field = fieldOf(el);
+        if (!field) return;
+        var valid = validateField(el);
+        field.classList.toggle("invalid", !valid);
+        if (!valid) ok = false;
+      });
+      return ok;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!validate()) {
+        var bad = form.querySelector(".field.invalid input, .field.invalid select, .field.invalid textarea");
+        if (bad) bad.focus();
+        return;
+      }
+
+      var record = {
+        ref: "OKC-" + Math.random().toString(36).slice(2, 6).toUpperCase(),
+        name: form.querySelector("#c-name").value.trim(),
+        business: form.querySelector("#c-biz").value.trim(),
+        email: form.querySelector("#c-email").value.trim(),
+        phone: form.querySelector("#c-phone").value.trim(),
+        projectType: form.querySelector("#c-type").value,
+        message: form.querySelector("#c-msg").value.trim(),
+        lang: current,
+        createdAt: new Date().toISOString()
+      };
+
+      try {
+        var key = "okc-inquiries";
+        var list = JSON.parse(localStorage.getItem(key) || "[]");
+        if (!Array.isArray(list)) list = [];
+        list.push(record);
+        list = list.slice(-10);
+        localStorage.setItem(key, JSON.stringify(list));
+      } catch (err) { /* storage unavailable — success card still renders */ }
+
+      form.style.display = "none";
+      if (success) {
+        var refEl = success.querySelector(".ref");
+        if (refEl) {
+          refEl.textContent = record.ref + " · " + new Date().toLocaleDateString(
+            current === "es" ? "es-US" : "en-US",
+            { month: "short", day: "numeric", year: "numeric" }
+          );
+        }
+        success.classList.add("show");
+        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+
+    form.querySelectorAll("input, select, textarea").forEach(function (el) {
+      el.addEventListener("input", function () {
+        var f = fieldOf(el);
+        if (f) f.classList.remove("invalid");
+      });
+    });
+
+    if (again) {
+      again.addEventListener("click", function () {
+        form.reset();
+        form.querySelectorAll(".field").forEach(function (f) { f.classList.remove("invalid"); });
+        form.style.display = "";
+        if (success) success.classList.remove("show");
+        var first = form.querySelector("input, select, textarea");
+        if (first) first.focus();
+      });
+    }
+  }
+
   /* ---------------- Init ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
     markToday();
     initForms();
     initBooking();
+    initNav();
+    initInquiry();
     applyLang(current);
   });
 })();
