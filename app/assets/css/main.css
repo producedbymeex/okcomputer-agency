@@ -1013,3 +1013,85 @@ body.theme-medspa .back-link:hover { color: var(--text); }
   body.theme-medspa .rt-util-inner { font-size: 10px; }
   body.theme-medspa .nav-links, body.theme-medspa .nav-right .rt-btn { display: none; }
 }
+
+/* ============================================================
+   Theme: Casa Verde Cocina (restaurant) — Senso-style dark editorial
+   Deep black canvas · amber/gold accents · serif display type
+   ============================================================ */
+body.theme-restaurant {
+  --bg: #0b0a09;
+  --surface: #151412;
+  --surface-2: #1c1a17;
+  --border: rgba(212, 151, 59, 0.2);
+  --border-strong: rgba(212, 151, 59, 0.42);
+  --text: #f3ece0;
+  --muted: #b5aa98;
+  --faint: #857b6b;
+  --accent: #d4973b;
+  --serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+}
+body.theme-restaurant h1, body.theme-restaurant h2, body.theme-restaurant h3 { font-family: var(--serif); font-weight: 400; letter-spacing: 0; }
+
+body.theme-restaurant .nav { background: rgba(21, 20, 18, 0.72); backdrop-filter: blur(14px); border: 1px solid var(--border); border-radius: 14px; margin: 16px auto 0; max-width: 1180px; width: calc(100% - 32px); top: 12px; }
+body.theme-restaurant .brand { font-family: var(--serif); font-size: 20px; letter-spacing: .22em; text-transform: uppercase; color: var(--text); }
+body.theme-restaurant .nav-links a { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text); }
+body.theme-restaurant .nav-links a:hover { color: var(--accent); }
+body.theme-restaurant .lang-toggle { border-color: var(--border-strong); }
+
+body.theme-restaurant .sn-btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 26px; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; border-radius: 2px; border: 1px solid var(--accent); cursor: pointer; transition: filter 160ms, background 160ms, color 160ms; }
+body.theme-restaurant .sn-btn-gold { background: #c98a3c; border-color: #c98a3c; color: #1a1408; }
+body.theme-restaurant .sn-btn-gold:hover { filter: brightness(1.12); }
+body.theme-restaurant .sn-btn-outline { background: transparent; color: var(--text); border-color: var(--border-strong); }
+body.theme-restaurant .sn-btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+body.theme-restaurant .nav .sn-btn { padding: 11px 18px; }
+
+body.theme-restaurant .sn-hero { padding: 96px 0 80px; background: radial-gradient(ellipse at 75% 40%, rgba(212,151,59,.1), transparent 60%); }
+body.theme-restaurant .sn-hero-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
+body.theme-restaurant .sn-eyebrow { font-size: 11px; letter-spacing: .22em; color: var(--accent); margin-bottom: 24px; font-family: var(--mono); }
+body.theme-restaurant .sn-hero h1 { font-size: clamp(42px, 5.6vw, 72px); line-height: 1.06; margin: 0 0 28px; max-width: 10em; }
+body.theme-restaurant .sn-hero .lede { color: var(--muted); font-size: 15px; line-height: 1.85; max-width: 32em; margin-bottom: 36px; }
+body.theme-restaurant .sn-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+body.theme-restaurant .sn-stage { margin: 0; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 14px; overflow: hidden; box-shadow: 0 0 60px rgba(212,151,59,.14), 0 30px 70px rgba(0,0,0,.6); aspect-ratio: 4 / 3; }
+body.theme-restaurant .sn-stage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+body.theme-restaurant .sn-pillars { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: #0e0d0b; }
+body.theme-restaurant .sn-pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+body.theme-restaurant .sn-pillar { display: flex; gap: 20px; align-items: flex-start; padding: 36px 32px; color: var(--accent); }
+body.theme-restaurant .sn-pillar + .sn-pillar { border-left: 1px solid var(--border); }
+body.theme-restaurant .sn-pillar svg { flex: none; }
+body.theme-restaurant .sn-pillar h3 { font-family: var(--sans); font-size: 11px; letter-spacing: .18em; color: var(--text); margin: 0 0 8px; font-weight: 600; }
+body.theme-restaurant .sn-pillar p { font-size: 13px; line-height: 1.7; color: var(--muted); margin: 0; }
+
+body.theme-restaurant .section { border-bottom: 1px solid var(--border); }
+body.theme-restaurant .sn-kicker { text-align: center; font-size: 11px; letter-spacing: .26em; color: var(--accent); margin: 0 0 12px; font-family: var(--mono); }
+body.theme-restaurant .sn-title { text-align: center; font-size: clamp(30px, 4vw, 44px); margin: 0 0 48px; }
+body.theme-restaurant .sn-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+body.theme-restaurant .sn-card { background: #151412; border: 1px solid var(--border); border-radius: 4px; padding: 30px 28px; transition: border-color 160ms, transform 160ms; }
+body.theme-restaurant .sn-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+body.theme-restaurant .sn-card-top { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-bottom: 14px; }
+body.theme-restaurant .sn-card h3 { font-size: 22px; margin: 0; }
+body.theme-restaurant .sn-price { font-family: var(--serif); font-size: 22px; color: #d4973b; }
+body.theme-restaurant .sn-card p { color: var(--muted); font-size: 14px; line-height: 1.75; margin: 0; }
+body.theme-restaurant .sn-center { text-align: center; margin-top: 44px; }
+body.theme-restaurant .sn-reserve { text-align: center; }
+body.theme-restaurant .sn-reserve h2 { font-size: clamp(30px, 4vw, 44px); margin: 0 0 12px; }
+body.theme-restaurant .sn-reserve p { color: var(--muted); margin: 0 0 28px; }
+
+body.theme-restaurant .section-head h2 { color: var(--text); }
+body.theme-restaurant .hours-table caption { font-family: var(--serif); color: var(--text); }
+body.theme-restaurant .hours-table tr.today th, body.theme-restaurant .hours-table tr.today td { color: var(--accent); }
+body.theme-restaurant .info-line a:hover, body.theme-restaurant .info-line-val:hover { color: var(--accent); }
+body.theme-restaurant .info-line-val { text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
+body.theme-restaurant .action-bar { background: rgba(11, 10, 9, 0.96); border-top: 1px solid var(--border); }
+body.theme-restaurant .action-bar .sn-btn { flex: 1; }
+body.theme-restaurant .demo-badge { text-align: center; padding: 14px 24px; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--accent); background: rgba(212,151,59,.07); border-top: 1px solid var(--border); }
+body.theme-restaurant .footer p, body.theme-restaurant .back-link { color: var(--faint); }
+
+@media (max-width: 900px) {
+  body.theme-restaurant .sn-hero-grid, body.theme-restaurant .sn-cards, body.theme-restaurant .sn-pillars-grid { grid-template-columns: 1fr; }
+  body.theme-restaurant .sn-pillar + .sn-pillar { border-left: 0; border-top: 1px solid var(--border); }
+  body.theme-restaurant .sn-hero { padding: 56px 0; }
+  body.theme-restaurant .nav .sn-btn { display: none; }
+}

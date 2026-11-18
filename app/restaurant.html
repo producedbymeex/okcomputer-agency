@@ -7,102 +7,81 @@
 <meta name="description" content="Casa Verde Cocina: tacos, enchiladas verdes and margaritas in Southtown San Antonio. Order online, see the menu, find us.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
-<style>:root { --accent: #3b82f6; }</style>
 </head>
 <body class="theme-restaurant">
 
-<nav class="nav">
+<body class="theme-restaurant">
+
+<nav class="nav sn-nav">
   <div class="container nav-inner">
-    <a class="brand" href="#top"><span class="brand-dot"></span>Casa Verde Cocina</a>
+    <a class="brand" href="#top">Casa Verde Cocina</a>
     <div class="nav-links">
+      <a href="#top" data-i18n="navHome">Home</a>
+      <a href="#about" data-i18n="navAbout">About</a>
       <a href="#menu" data-i18n="navMenu">Menu</a>
-      <a href="#reviews" data-i18n="navReviews">Reviews</a>
-      <a href="#visit" data-i18n="navVisit">Hours &amp; Location</a>
+      <a href="#visit" data-i18n="navLocation">Location</a>
     </div>
     <div class="nav-right">
       <button type="button" class="lang-toggle"><span class="active-lang">EN</span>&nbsp;/&nbsp;<span data-i18n="otherLang">ES</span></button>
-      <a class="btn btn-cobalt btn-sm" href="#" data-demo-action="order" data-i18n="navOrder">Order</a>
+      <a class="sn-btn sn-btn-gold" href="#reserve" data-i18n="navReserve">RESERVE A TABLE</a>
     </div>
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow" data-i18n="eyebrow">SOUTHTOWN · SAN ANTONIO, TX</div>
-      <h1 data-i18n="h1">Verde means green. Fresh means everything.</h1>
-      <p class="lede" data-i18n="lede">Salsas made every morning, tortillas pressed to order, margaritas that mean it. Southtown's neighborhood Mexican kitchen since 2019.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-cobalt" href="#menu"><span data-i18n="ctaMenu">See the menu</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="#" data-demo-action="order" data-i18n="ctaOrder">Order pickup</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-item"><strong>4.7</strong> <span data-i18n="trust1">★ 486 Google reviews</span></div>
-        <div class="trust-item"><strong data-i18n="trust2v">Tue–Sun</strong> <span data-i18n="trust2">kitchen open</span></div>
-        <div class="trust-item"><strong>EN/ES</strong> <span data-i18n="trust3">menú en español</span></div>
+<main id="main-content">
+
+<header class="sn-hero" id="top">
+  <div class="container sn-hero-grid">
+    <div class="sn-hero-copy">
+      <div class="sn-eyebrow" data-i18n="eyebrow">MODERN MEXICAN CUISINE · SAN ANTONIO, TX</div>
+      <h1 data-i18n="h1">Savor Life’s Finest Moments</h1>
+      <p class="lede" data-i18n="lede">At Casa Verde Cocina, we blend traditional Mexican heritage with modern culinary artistry. Every dish is crafted with the finest regional ingredients for an unforgettable dining experience.</p>
+      <div class="sn-ctas">
+        <a class="sn-btn sn-btn-gold" href="#menu" data-i18n="ctaMenu">VIEW MENU</a>
+        <a class="sn-btn sn-btn-outline" href="#reserve" data-i18n="ctaReserve">RESERVE A TABLE</a>
       </div>
     </div>
-    <div class="hero-media">
-      <img src="assets/img/restaurant-hero.png" alt="Inside Casa Verde Cocina">
-      <div class="hero-badge"><span class="pulse"></span><span data-i18n="badge">KITCHEN OPEN TODAY · UNTIL 9 PM</span></div>
-    </div>
+    <figure class="sn-stage"><img src="assets/img/restaurant-hero.png" alt="Signature dish at Casa Verde Cocina" data-i18n-alt="heroAlt"></figure>
   </div>
 </header>
 
-<main id="main-content">
-
-<div class="metrics">
-  <div class="container metrics-row">
-    <div class="metric"><div class="metric-value">4.7<span class="unit">/5</span></div><div class="metric-label" data-i18n="m1">Google rating</div></div>
-    <div class="metric"><div class="metric-value">486</div><div class="metric-label" data-i18n="m2">Verified reviews</div></div>
-    <div class="metric"><div class="metric-value">~25<span class="unit">min</span></div><div class="metric-label" data-i18n="m3">Average pickup time</div></div>
-    <div class="metric"><div class="metric-value">100<span class="unit">%</span></div><div class="metric-label" data-i18n="m4">Salsas made in-house daily</div></div>
-  </div>
-</div>
-
-<section class="section" id="menu">
-  <div class="container">
-    <div class="section-head">
-      <h2 data-i18n="menuH">The menu</h2>
-      <p data-i18n="menuP">The short version of a long tradition. Full menu in the dining room.</p>
-    </div>
-    <div class="section-head" style="margin-bottom:20px;"><h3 class="mono" style="font-size:13px; color:var(--cobalt); letter-spacing:0.1em;" data-i18n="cat1">TACOS · $4.50 EACH</h3></div>
-    <div class="rows">
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="t1n">Al Pastor</div><div class="row-desc" data-i18n="t1d">Trompo-roasted pork, grilled pineapple, white onion, cilantro</div></div><div class="row-meta"><div class="row-price">$4.50</div></div></div>
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="t2n">Baja Fish</div><div class="row-desc" data-i18n="t2d">Crispy cod, chipotle crema, shaved cabbage, lime</div></div><div class="row-meta"><div class="row-price">$4.50</div></div></div>
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="t3n">Barbacoa de Cachete</div><div class="row-desc" data-i18n="t3d">Slow-braised beef cheek, consommé for dipping</div></div><div class="row-meta"><div class="row-price">$4.50</div></div></div>
-    </div>
-    <div class="section-head" style="margin:44px 0 20px;"><h3 class="mono" style="font-size:13px; color:var(--cobalt); letter-spacing:0.1em;" data-i18n="cat2">PLATES</h3></div>
-    <div class="rows">
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="p1n">Enchiladas Verdes</div><div class="row-desc" data-i18n="p1d">Three chicken enchiladas, roasted tomatillo salsa, crema, queso fresco</div></div><div class="row-meta"><div class="row-price">$14.50</div></div></div>
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="p2n">Chilaquiles de la Casa</div><div class="row-desc" data-i18n="p2d">Crisped tortilla, salsa verde or roja, egg, pulled chicken option</div></div><div class="row-meta"><div class="row-price">$13.00</div></div></div>
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="p3n">Carne Asada a la Piedra</div><div class="row-desc" data-i18n="p3d">Grilled steak, charred scallion, guacamole, warm tortillas</div></div><div class="row-meta"><div class="row-price">$18.00</div></div></div>
-    </div>
-    <div class="section-head" style="margin:44px 0 20px;"><h3 class="mono" style="font-size:13px; color:var(--cobalt); letter-spacing:0.1em;" data-i18n="cat3">FROM THE BAR</h3></div>
-    <div class="rows">
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="d1n">Margarita de la Casa</div><div class="row-desc" data-i18n="d1d">Fresh lime, reposado, orange liqueur — salted rim on request</div></div><div class="row-meta"><div class="row-price">$10.00</div></div></div>
-      <div class="row-item"><div class="row-main"><div class="row-name" data-i18n="d2n">Agua Fresca del Día</div><div class="row-desc" data-i18n="d2d">Horchata, jamaica, or whatever the kitchen decided today</div></div><div class="row-meta"><div class="row-price">$4.00</div></div></div>
-    </div>
-    <div class="hero-ctas" style="margin-top:36px;">
-      <a class="btn btn-cobalt" href="#" data-demo-action="order" data-i18n="menuCta">Order pickup online</a>
-      <a class="btn btn-ghost" href="#" data-demo-action="reserve" data-i18n="menuCta2">Reserve a table</a>
-    </div>
+<section class="sn-pillars" id="about">
+  <div class="container sn-pillars-grid">
+    <div class="sn-pillar"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c0-6 0-9 0-14M12 12c-3 0-5-2-5-5 3 0 5 2 5 5zM12 15c3 0 5-2 5-5-3 0-5 2-5 5zM12 8c0-2 1-4 3-5 1 2 0 4-3 5z"/></svg><div><h3 data-i18n="p1t">LOCALLY SOURCED</h3><p data-i18n="p1d">We use the freshest local ingredients in every dish.</p></div></div>
+    <div class="sn-pillar"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 14a4 4 0 1 1 1-7.8A4 4 0 0 1 16 6a4 4 0 0 1 1 8v6H7z"/><path d="M7 17h10"/></svg><div><h3 data-i18n="p2t">CULINARY ARTISTRY</h3><p data-i18n="p2d">Hand-crafted traditional flavors elevated by modern culinary technique.</p></div></div>
+    <div class="sn-pillar"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l-.5 6a3.5 3.5 0 0 1-7 0z"/><path d="M12 12.5V20M8.500 21h7"/></svg><div><h3 data-i18n="p3t">FINEST SELECTIONS</h3><p data-i18n="p3d">An exceptional curation of mezcals, tequilas, and pairing wines.</p></div></div>
   </div>
 </section>
 
-<section class="section" id="reviews">
+<section class="section" id="menu">
   <div class="container">
-    <div class="section-head">
-      <h2 data-i18n="revH">Word around Southtown</h2>
-      <p data-i18n="revP">From our public Google Business Profile.</p>
+    <p class="sn-kicker" data-i18n="menuK">CURATED MENU</p>
+    <h2 class="sn-title" data-i18n="menuH">From our kitchen</h2>
+    <div class="sn-cards">
+      <article class="sn-card">
+        <div class="sn-card-top"><h3 data-i18n="m1n">Prime Ribeye al Carbón</h3><span class="sn-price">$48</span></div>
+        <p data-i18n="m1d">Mesquite-grilled Texas prime ribeye, chimichurri rojo, charred bone marrow.</p>
+      </article>
+      <article class="sn-card">
+        <div class="sn-card-top"><h3 data-i18n="m2n">Mole Negro Oaxaqueño</h3><span class="sn-price">$34</span></div>
+        <p data-i18n="m2d">Slow-braised duck leg, authentic 30-ingredient black mole, heirloom corn tortillas.</p>
+      </article>
+      <article class="sn-card">
+        <div class="sn-card-top"><h3 data-i18n="m3n">Ceviche Costeño</h3><span class="sn-price">$22</span></div>
+        <p data-i18n="m3d">Wild Gulf red snapper, fresh lime, avocado mousse, crispy plantain ribbons.</p>
+      </article>
     </div>
-    <div class="grid-3">
-      <div class="card"><div class="stars">★★★★★</div><blockquote data-i18n="r1">"The al pastor is the real thing — trompo by the window, not a shortcut. Rare north of the border."</blockquote><div class="who"><strong>Miguel S.</strong> · King William</div></div>
-      <div class="card"><div class="stars">★★★★★</div><blockquote data-i18n="r2">"Ordered online, picked up in 20 minutes, still hot at home. The margarita kit was a nice surprise."</blockquote><div class="who"><strong>Karen D.</strong> · Lavaca</div></div>
-      <div class="card"><div class="stars">★★★★★</div><blockquote data-i18n="r3">"Sábado en la mañana, chilaquiles verdes y café de olla. Se siente como la casa de mi abuela."</blockquote><div class="who"><strong>Paola V.</strong> · Southtown</div></div>
-    </div>
+    <div class="sn-center"><a class="sn-btn sn-btn-outline" href="#reserve" data-i18n="menuCta">RESERVE A TABLE</a></div>
+  </div>
+</section>
+
+<section class="section" id="reserve">
+  <div class="container sn-reserve">
+    <h2 data-i18n="resH">Reserve your table</h2>
+    <p data-i18n="resP">Parties of 6 or more: call ahead and we'll prepare the patio.</p>
+    <a class="sn-btn sn-btn-gold" href="tel:+12105550177" data-i18n="resCta">CALL TO RESERVE</a>
   </div>
 </section>
 
@@ -115,7 +94,7 @@
       <table class="hours-table">
         <caption data-i18n="hoursCaption">Operating Hours</caption>
         <thead>
-          <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+          <tr><th scope="col" data-i18n="thDay">Day</th><th scope="col" data-i18n="thHours">Hours</th></tr>
         </thead>
         <tbody>
           <tr data-day="mon"><th scope="row" data-i18n="dayMon">Monday</th><td data-i18n="closed">Closed</td></tr>
@@ -132,104 +111,78 @@
       <div class="section-head" style="margin-bottom:28px;">
         <h2 data-i18n="findH">Find us</h2>
       </div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="lbl" data-i18n="lblAddress">ADDRESS</span><a href="https://maps.google.com/?q=123+Navarro+St+San+Antonio+TX" target="_blank" rel="noopener" class="info-line-val" data-i18n="valAddr">123 Navarro St, San Antonio, TX 78205</a></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><div><span class="lbl" data-i18n="lblPhone">PHONE</span><a href="tel:+12105550177" data-i18n="phone">(210) 555-0177</a></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-8-8 18-2.5-7.5z"/></svg><div><span class="lbl" data-i18n="lblOrder">PICKUP</span><span data-i18n="order">Order ahead — ready in about 25 minutes</span></div></div>
-      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg><div><span class="lbl" data-i18n="lblGroup">GROUPS</span><span data-i18n="groups">Tables of 6+ — call ahead and we'll set the patio</span></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="lbl" data-i18n="lblAddress">ADDRESS</span><a href="https://maps.google.com/?q=123+Navarro+St+San+Antonio+TX" target="_blank" rel="noopener" class="info-line-val" data-i18n="valAddr">123 Navarro St, San Antonio, TX 78205</a></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg><div><span class="lbl" data-i18n="lblPhone">PHONE</span><a href="tel:+12105550177" data-i18n="phone">(210) 555-0177</a></div></div>
+      <div class="info-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/></svg><div><span class="lbl" data-i18n="lblGroup">GROUPS</span><span data-i18n="groups">Tables of 6+ — call ahead and we'll prepare the patio</span></div></div>
     </div>
   </div>
 </section>
 
-<div class="demo-badge" data-i18n="demo_badge">DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio</div>
 </main>
+
+<div class="demo-badge" data-i18n="demo_badge">DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio</div>
 
 <footer class="footer">
   <div class="container footer-inner">
     <p data-i18n="footP">© 2026 Casa Verde Cocina · Demo site — business name, photos and data are illustrative.</p>
-    <a class="back-link" href="index.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> <span data-i18n="backGallery">Back to demo gallery</span></a>
+    <a class="back-link" href="index.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> <span data-i18n="backGallery">Back to demo gallery</span></a>
   </div>
 </footer>
 
 <div class="action-bar">
-  <a class="btn btn-ghost" href="tel:+12105550177" data-i18n="abCall">Call now</a>
-  <a class="btn btn-cobalt" href="#" data-demo-action="order" data-i18n="abOrder">Order pickup</a>
+  <a class="sn-btn sn-btn-outline" href="tel:+12105550177" data-i18n="abCall">Call now</a>
+  <a class="sn-btn sn-btn-gold" href="#reserve" data-i18n="abReserve">Reserve</a>
 </div>
 
 <script>
 window.I18N = {
   en: {
-    navMenu: "Menu", navReviews: "Reviews", navVisit: "Hours & Location", navOrder: "Order", otherLang: "ES",
-    eyebrow: "SOUTHTOWN · SAN ANTONIO, TX",
-    h1: "Verde means green. Fresh means everything.",
-    lede: "Salsas made every morning, tortillas pressed to order, margaritas that mean it. Southtown's neighborhood Mexican kitchen since 2019.",
-    ctaMenu: "See the menu", ctaOrder: "Order pickup",
-    trust1: "★ 486 Google reviews", trust2: "kitchen open", trust2v: "Tue–Sun", trust3: "menú en español",
-    badge: "KITCHEN OPEN TODAY · UNTIL 9 PM",
-    m1: "Google rating", m2: "Verified reviews", m3: "Average pickup time", m4: "Salsas made in-house daily",
-    menuH: "The menu", menuP: "The short version of a long tradition. Full menu in the dining room.",
-    cat1: "TACOS · $4.50 EACH",
-    t1n: "Al Pastor", t1d: "Trompo-roasted pork, grilled pineapple, white onion, cilantro",
-    t2n: "Baja Fish", t2d: "Crispy cod, chipotle crema, shaved cabbage, lime",
-    t3n: "Barbacoa de Cachete", t3d: "Slow-braised beef cheek, consommé for dipping",
-    cat2: "PLATES",
-    p1n: "Enchiladas Verdes", p1d: "Three chicken enchiladas, roasted tomatillo salsa, crema, queso fresco",
-    p2n: "Chilaquiles de la Casa", p2d: "Crisped tortilla, salsa verde or roja, egg, pulled chicken option",
-    p3n: "Carne Asada a la Piedra", p3d: "Grilled steak, charred scallion, guacamole, warm tortillas",
-    cat3: "FROM THE BAR",
-    d1n: "Margarita de la Casa", d1d: "Fresh lime, reposado, orange liqueur — salted rim on request",
-    d2n: "Agua Fresca del Día", d2d: "Horchata, jamaica, or whatever the kitchen decided today",
-    menuCta: "Order pickup online", menuCta2: "Reserve a table",
-    revH: "Word around Southtown", revP: "From our public Google Business Profile.",
-    r1: "\"The al pastor is the real thing — trompo by the window, not a shortcut. Rare north of the border.\"",
-    r2: "\"Ordered online, picked up in 20 minutes, still hot at home. The margarita kit was a nice surprise.\"",
-    r3: "\"Sábado en la mañana, chilaquiles verdes y café de olla. Se siente como la casa de mi abuela.\"",
-    visitH: "Hours", findH: "Find us",
+    navHome: "Home", navAbout: "About", navMenu: "Menu", navLocation: "Location", navReserve: "RESERVE A TABLE", otherLang: "ES",
+    eyebrow: "MODERN MEXICAN CUISINE · SAN ANTONIO, TX",
+    h1: "Savor Life’s Finest Moments",
+    lede: "At Casa Verde Cocina, we blend traditional Mexican heritage with modern culinary artistry. Every dish is crafted with the finest regional ingredients for an unforgettable dining experience.",
+    ctaMenu: "VIEW MENU", ctaReserve: "RESERVE A TABLE", heroAlt: "Signature dish at Casa Verde Cocina",
+    p1t: "LOCALLY SOURCED", p1d: "We use the freshest local ingredients in every dish.",
+    p2t: "CULINARY ARTISTRY", p2d: "Hand-crafted traditional flavors elevated by modern culinary technique.",
+    p3t: "FINEST SELECTIONS", p3d: "An exceptional curation of mezcals, tequilas, and pairing wines.",
+    menuK: "CURATED MENU", menuH: "From our kitchen",
+    m1n: "Prime Ribeye al Carbón", m1d: "Mesquite-grilled Texas prime ribeye, chimichurri rojo, charred bone marrow.",
+    m2n: "Mole Negro Oaxaqueño", m2d: "Slow-braised duck leg, authentic 30-ingredient black mole, heirloom corn tortillas.",
+    m3n: "Ceviche Costeño", m3d: "Wild Gulf red snapper, fresh lime, avocado mousse, crispy plantain ribbons.",
+    menuCta: "RESERVE A TABLE",
+    resH: "Reserve your table", resP: "Parties of 6 or more: call ahead and we'll prepare the patio.", resCta: "CALL TO RESERVE",
+    visitH: "Hours", findH: "Find us", hoursCaption: "Operating Hours", thDay: "Day", thHours: "Hours",
     dayMon: "Monday", dayTue: "Tuesday", dayWed: "Wednesday", dayThu: "Thursday", dayFri: "Friday", daySat: "Saturday", daySun: "Sunday",
     closed: "Closed", brunch: "10:00 – 15:00 brunch",
-    lblAddress: "ADDRESS", addr: "806 S St Mary's St, San Antonio, TX 78205", lblPhone: "PHONE", phone: "(210) 555-0177",
-    lblOrder: "PICKUP", order: "Order ahead — ready in about 25 minutes",
-    lblGroup: "GROUPS", groups: "Tables of 6+ — call ahead and we'll set the patio",
+    lblAddress: "ADDRESS", valAddr: "123 Navarro St, San Antonio, TX 78205", lblPhone: "PHONE", phone: "(210) 555-0177",
+    lblGroup: "GROUPS", groups: "Tables of 6+ — call ahead and we'll prepare the patio",
+    demo_badge: "DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio",
     footP: "© 2026 Casa Verde Cocina · Demo site — business name, photos and data are illustrative.",
-    backGallery: "Back to demo gallery", abCall: "Call now", abOrder: "Order pickup",
-    hoursCaption: "Operating Hours",
-    demo_badge: "DEMO PREVIEW — Fictional business profile created by OKComputer Web Studio"
+    backGallery: "Back to demo gallery", abCall: "Call now", abReserve: "Reserve"
   },
   es: {
-    navMenu: "Menú", navReviews: "Reseñas", navVisit: "Horarios y ubicación", navOrder: "Pedir", otherLang: "EN",
-    eyebrow: "SOUTHTOWN · SAN ANTONIO, TX",
-    h1: "Verde significa fresco. Fresco lo es todo.",
-    lede: "Salsas hechas cada mañana, tortillas recién prensadas, margaritas en serio. La cocina mexicana del barrio de Southtown desde 2019.",
-    ctaMenu: "Ver el menú", ctaOrder: "Pedir para llevar",
-    trust1: "★ 486 reseñas de Google", trust2: "cocina abierta", trust2v: "Mar–Dom", trust3: "menú en español",
-    badge: "COCINA ABIERTA HOY · HASTA LAS 9 PM",
-    m1: "Calificación en Google", m2: "Reseñas verificadas", m3: "Tiempo promedio de recogida", m4: "Salsas hechas en casa a diario",
-    menuH: "El menú", menuP: "La versión corta de una larga tradición. Menú completo en el comedor.",
-    cat1: "TACOS · $4.50 C/U",
-    t1n: "Al Pastor", t1d: "Cerdo del trompo, piña asada, cebolla, cilantro",
-    t2n: "Baja Fish", t2d: "Pescado empanizado, crema de chipotle, col, limón",
-    t3n: "Barbacoa de Cachete", t3d: "Cachete de res cocido lento, consomé para ahogar",
-    cat2: "PLATILLOS",
-    p1n: "Enchiladas Verdes", p1d: "Tres enchiladas de pollo, salsa de tomatillo asado, crema, queso fresco",
-    p2n: "Chilaquiles de la Casa", p2d: "Tortilla dorada, salsa verde o roja, huevo, opción de pollo deshebrado",
-    p3n: "Carne Asada a la Piedra", p3d: "Steak asado, cebollita, guacamole, tortillas calientes",
-    cat3: "EN LA BARRA",
-    d1n: "Margarita de la Casa", d1d: "Lima fresca, reposado, licor de naranja — con sal si gusta",
-    d2n: "Agua Fresca del Día", d2d: "Horchata, jamaica, o lo que haya decidido la cocina hoy",
-    menuCta: "Pedir para llevar en línea", menuCta2: "Reservar mesa",
-    revH: "Lo que se dice en Southtown", revP: "De nuestro perfil público de Google Business.",
-    r1: "\"El al pastor es el verdadero — trompo junto a la ventana, sin atajos. Raro al norte de la frontera.\"",
-    r2: "\"Pedí en línea, recogí en 20 minutos, aún caliente en casa. El kit de margarita fue una grata sorpresa.\"",
-    r3: "\"Sábado en la mañana, chilaquiles verdes y café de olla. Se siente como la casa de mi abuela.\"",
-    visitH: "Horarios", findH: "Encuéntrenos",
+    navHome: "Inicio", navAbout: "Nosotros", navMenu: "Menú", navLocation: "Ubicación", navReserve: "RESERVAR MESA", otherLang: "EN",
+    eyebrow: "COCINA MEXICANA MODERNA · SAN ANTONIO, TX",
+    h1: "Saboree los Mejores Momentos de la Vida",
+    lede: "En Casa Verde Cocina combinamos la herencia mexicana tradicional con el arte culinario moderno. Cada platillo se prepara con los mejores ingredientes regionales para una experiencia inolvidable.",
+    ctaMenu: "VER MENÚ", ctaReserve: "RESERVAR MESA", heroAlt: "Platillo estrella de Casa Verde Cocina",
+    p1t: "INGREDIENTES LOCALES", p1d: "Usamos los ingredientes locales más frescos en cada platillo.",
+    p2t: "ARTE CULINARIO", p2d: "Sabores tradicionales hechos a mano y elevados con técnica culinaria moderna.",
+    p3t: "SELECCIÓN EXCEPCIONAL", p3d: "Una curaduría excepcional de mezcales, tequilas y vinos para maridar.",
+    menuK: "MENÚ SELECTO", menuH: "De nuestra cocina",
+    m1n: "Ribeye Prime al Carbón", m1d: "Ribeye prime de Texas asado en mezquite, chimichurri rojo, tuétano asado.",
+    m2n: "Mole Negro Oaxaqueño", m2d: "Pierna de pato estofada lentamente, auténtico mole negro de 30 ingredientes, tortillas de maíz criollo.",
+    m3n: "Ceviche Costeño", m3d: "Huachinango silvestre del Golfo, limón fresco, mousse de aguacate, listones crujientes de plátano macho.",
+    menuCta: "RESERVAR MESA",
+    resH: "Reserve su mesa", resP: "Grupos de 6 o más: llame con anticipación y preparamos el patio.", resCta: "LLAMAR PARA RESERVAR",
+    visitH: "Horarios", findH: "Encuéntrenos", hoursCaption: "Horario de atención", thDay: "Día", thHours: "Horario",
     dayMon: "Lunes", dayTue: "Martes", dayWed: "Miércoles", dayThu: "Jueves", dayFri: "Viernes", daySat: "Sábado", daySun: "Domingo",
     closed: "Cerrado", brunch: "10:00 – 15:00 brunch",
-    lblAddress: "DIRECCIÓN", addr: "806 S St Mary's St, San Antonio, TX 78205", lblPhone: "TELÉFONO", phone: "(210) 555-0177",
-    lblOrder: "RECOGER", order: "Pida con anticipación — listo en unos 25 minutos",
+    lblAddress: "DIRECCIÓN", valAddr: "123 Navarro St, San Antonio, TX 78205", lblPhone: "TELÉFONO", phone: "(210) 555-0177",
     lblGroup: "GRUPOS", groups: "Mesas de 6+ — llame con anticipación y preparamos el patio",
+    demo_badge: "VISTA PREVIA DEMO — Perfil comercial ficticio creado por OKComputer Web Studio",
     footP: "© 2026 Casa Verde Cocina · Sitio demo — nombre, fotos y datos son ilustrativos.",
-    backGallery: "Volver a la galería", abCall: "Llamar", abOrder: "Pedir",
-    hoursCaption: "Horario de atención",
-    demo_badge: "VISTA PREVIA DEMO — Perfil comercial ficticio creado por OKComputer Web Studio"
+    backGallery: "Volver a la galería", abCall: "Llamar", abReserve: "Reservar"
   }
 };
 </script>
