@@ -1348,7 +1348,7 @@ body.studio #demos .demo-grid,
 }
 .demo-card { min-width: 0; max-width: 100%; }
 .demo-thumb, body.studio .demo-thumb {
-  width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 10px;
+  width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 10px;
   background: #000; position: relative; border-bottom: 0;
 }
 .demo-thumb img, body.studio .demo-thumb img {
@@ -1376,3 +1376,56 @@ body.studio .field input, body.studio .field select, body.studio .field textarea
 body.theme-barbershop .field input, body.theme-barbershop .field select, body.theme-barbershop .field textarea, body.theme-barbershop .form-control { font-family: "Cinzel", var(--sans); color: var(--text); padding: 12px 14px; border: 1px solid var(--border); background: #151412; }
 body.theme-medspa .field input, body.theme-medspa .field select, body.theme-medspa .field textarea, body.theme-medspa .form-control { font-family: "Poppins", var(--sans); color: var(--text); padding: 12px 14px; border: 1px solid var(--border); background: #fff; }
 body.theme-restaurant .field input, body.theme-restaurant .field select, body.theme-restaurant .field textarea, body.theme-restaurant .form-control { font-family: "Cormorant Garamond", var(--sans); font-size: 1.05rem; color: var(--text); padding: 12px 14px; border: 1px solid var(--border); background: var(--surface); }
+
+/* ---------- HVAC thumbnail framing ---------- */
+.demo-thumb img { object-fit: cover; }
+.demo-card[data-theme="contractor"] .demo-thumb img,
+.demo-thumb img[src*="contractor"],
+body.studio .demo-thumb img[src*="contractor"] { object-position: center 20%; }
+
+/* ---------- Med spa booking typography ---------- */
+.theme-medspa #booking-root,
+.theme-medspa #booking-root button,
+.theme-medspa #booking-root .slot,
+.theme-medspa #booking-root .slot-grid button,
+.theme-medspa #booking-root .service-row,
+.theme-medspa #booking-root h3,
+.theme-medspa #booking-root p {
+  font-family: 'Poppins', -apple-system, sans-serif !important;
+}
+.theme-medspa #booking-root button {
+  border: 1px solid #cdbfae; border-radius: 8px; letter-spacing: 0.02em;
+}
+
+/* ---------- Demo disclaimer modal ---------- */
+.demo-modal-backdrop {
+  position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+  opacity: 1; transition: opacity 300ms ease;
+}
+.demo-modal-backdrop.fade-out { opacity: 0; pointer-events: none; }
+.demo-modal-card {
+  max-width: 460px; background: #14151b; border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px; padding: 32px; text-align: center; color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5); font-family: 'Poppins', -apple-system, sans-serif;
+}
+.demo-modal-card h3 { margin: 14px 0 10px; font-size: 22px; color: #fff; }
+.demo-modal-card p { margin: 0 0 22px; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.8); }
+.demo-modal-pill {
+  display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px;
+  letter-spacing: 0.14em; font-weight: 600; background: rgba(255,255,255,0.1); color: #fff;
+}
+.btn-demo-dismiss {
+  cursor: pointer; border: 0; border-radius: 10px; padding: 12px 22px; font-size: 15px;
+  font-weight: 600; background: #fff; color: #14151b; font-family: inherit;
+}
+
+/* ---------- Terms section ---------- */
+.terms-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .terms-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .terms-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.terms-card { padding: 26px; border: 1px solid var(--border); border-radius: 14px; background: rgba(255,255,255,0.03); }
+.terms-card h3 { margin: 10px 0 8px; font-size: 19px; }
+.terms-card p { margin: 0; line-height: 1.6; opacity: 0.8; }
+.terms-num { font-size: 12px; letter-spacing: 0.14em; opacity: 0.6; }

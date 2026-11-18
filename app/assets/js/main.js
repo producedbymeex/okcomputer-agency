@@ -344,6 +344,29 @@
     }
   }
 
+  /* ---------------- Demo disclaimer ---------------- */
+  function initDemoDisclaimer() {
+    var cl = document.body.classList;
+    if (!(cl.contains("theme-contractor") || cl.contains("theme-barbershop") || cl.contains("theme-medspa") || cl.contains("theme-restaurant"))) return;
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem("okc_demo_modal_dismissed") === "true"; } catch (e) {}
+    if (dismissed || document.getElementById("demoModal")) return;
+    var m = document.createElement("div");
+    m.className = "demo-modal-backdrop";
+    m.id = "demoModal";
+    m.setAttribute("role", "dialog");
+    m.setAttribute("aria-modal", "true");
+    m.innerHTML = '<div class="demo-modal-card"><span class="demo-modal-pill">PORTFOLIO DEMO</span><h3>Fictional Demonstration Profile</h3><p>This website is a custom production demo built by <strong>OKComputer Web Studio</strong>. All business names, addresses, phone numbers, services, and booking interactions are simulated for demonstration purposes.</p><button type="button" class="btn-demo-dismiss" id="dismissDemoModal">Enter Live Demo \u2192</button></div>';
+    document.body.appendChild(m);
+    var btn = document.getElementById("dismissDemoModal");
+    btn.focus();
+    btn.addEventListener("click", function () {
+      try { sessionStorage.setItem("okc_demo_modal_dismissed", "true"); } catch (e) {}
+      m.classList.add("fade-out");
+      setTimeout(function () { if (m.parentNode) m.parentNode.removeChild(m); }, 300);
+    });
+  }
+
   /* ---------------- Init ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
     markToday();
@@ -352,5 +375,6 @@
     initNav();
     initInquiry();
     applyLang(current);
+    initDemoDisclaimer();
   });
 })();
