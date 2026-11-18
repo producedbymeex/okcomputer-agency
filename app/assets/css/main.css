@@ -25,6 +25,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+input, select, textarea, button { font-family: inherit; font-size: 1rem; color: inherit; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -1336,3 +1338,41 @@ body.studio .footer { border-top: 1px solid var(--border); }
   body.studio .btn, body.studio .demo-card, body.studio .price-card { transition: none; }
   body.studio .demo-card:hover, body.studio .price-card:hover, body.studio .btn:hover { transform: none; }
 }
+
+
+/* ---------- Demo grid 2x2, fixed-ratio thumbs ---------- */
+body.studio #demos .demo-grid,
+#demos .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+@media (max-width: 699px) {
+  body.studio #demos .demo-grid, #demos .demo-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.demo-card { min-width: 0; max-width: 100%; }
+.demo-thumb, body.studio .demo-thumb {
+  width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 10px;
+  background: #000; position: relative; border-bottom: 0;
+}
+.demo-thumb img, body.studio .demo-thumb img {
+  width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center; display: block;
+}
+body.studio .demo-card .demo-thumb { margin: 12px 12px 0; width: calc(100% - 24px); }
+
+/* ---------- Services ---------- */
+.services-grid { display: grid; gap: 22px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .services-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.service-card {
+  background: #14151b; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px 24px;
+  transition: transform 300ms var(--ease), border-color 300ms var(--ease), box-shadow 300ms var(--ease);
+}
+.service-card:hover { transform: translateY(-4px); border-color: rgba(224, 164, 88, 0.55); box-shadow: 0 0 36px -10px rgba(201, 138, 60, 0.35); }
+.service-num { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; color: var(--amber); margin-bottom: 16px; }
+.service-card h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; color: #fff; }
+.service-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+/* ---------- Form font inheritance per theme ---------- */
+.field input, .field select, .field textarea, .form-control { font-family: inherit; font-size: 1rem; color: inherit; }
+body.studio .field input, body.studio .field select, body.studio .field textarea, body.studio .form-control { font-family: var(--sans); color: var(--text); padding: 12px 14px; }
+.theme-contractor .field input, .theme-contractor .field select, .theme-contractor .field textarea, .theme-contractor .form-control { font-family: "Montserrat", "Inter", system-ui, sans-serif; color: var(--navy); padding: 16px 18px; border: 1px solid #d5d9e4; background: #fff; }
+body.theme-barbershop .field input, body.theme-barbershop .field select, body.theme-barbershop .field textarea, body.theme-barbershop .form-control { font-family: "Cinzel", var(--sans); color: var(--text); padding: 12px 14px; border: 1px solid var(--border); background: #151412; }
+body.theme-medspa .field input, body.theme-medspa .field select, body.theme-medspa .field textarea, body.theme-medspa .form-control { font-family: "Poppins", var(--sans); color: var(--text); padding: 12px 14px; border: 1px solid var(--border); background: #fff; }
+body.theme-restaurant .field input, body.theme-restaurant .field select, body.theme-restaurant .field textarea, body.theme-restaurant .form-control { font-family: "Cormorant Garamond", var(--sans); font-size: 1.05rem; color: var(--text); padding: 12px 14px; border: 1px solid var(--border); background: var(--surface); }
