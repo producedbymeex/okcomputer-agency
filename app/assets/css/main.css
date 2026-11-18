@@ -817,52 +817,90 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
-   Theme: Southtown Fade Co. (barbershop)
-   Heritage atelier · dark vintage · brass · premium service cards
+   Theme: Southtown Fade Co. (barbershop) — The Heritage Atelier
+   Charcoal canvas · brass accents · serif display type
    ============================================================ */
-.theme-barbershop {
-  --bg: #141210;
-  --surface: #1b1815;
-  --surface-2: #221e19;
-  --border: rgba(197, 160, 89, 0.18);
-  --border-strong: rgba(197, 160, 89, 0.34);
+body.theme-barbershop {
+  --bg: #121110;
+  --surface: #1c1a17;
+  --surface-2: #24211d;
+  --border: rgba(197, 160, 89, 0.2);
+  --border-strong: rgba(197, 160, 89, 0.4);
   --text: #f3ede2;
   --muted: #b8ab95;
   --faint: #8a7d68;
   --accent: #c5a059;
+  --serif: "Playfair Display", "Cinzel", Georgia, serif;
   background: var(--bg);
+  color: var(--text);
 }
-.theme-barbershop .nav { background: rgba(20, 18, 16, 0.9); }
-.theme-barbershop .action-bar { background: rgba(20, 18, 16, 0.95); }
-.theme-barbershop .hero-badge { background: rgba(20, 18, 16, 0.86); }
-.theme-barbershop .btn-primary { color: #1a1408; }
-.theme-barbershop .btn-call { background: var(--accent); border-color: var(--accent); color: #1a1408; }
-.theme-barbershop .slot.sel { color: #1a1408; }
-.theme-barbershop .card { background: var(--surface); border-color: var(--border); }
-.theme-barbershop .demo-disclosure { background: rgba(197, 160, 89, 0.06); }
-.theme-barbershop .info-line a:hover { color: var(--accent); }
-.theme-barbershop .hours-table tr.today th,
-.theme-barbershop .hours-table tr.today td { color: var(--accent); }
+body.theme-barbershop h1, body.theme-barbershop h2, body.theme-barbershop h3 { font-family: var(--serif); font-weight: 500; letter-spacing: 0; }
+body.theme-barbershop .container { max-width: 1152px; }
 
-/* premium grooming service cards */
-.theme-barbershop .rows { border-top: 0; display: grid; gap: 10px; }
-.theme-barbershop .row-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 22px;
-  margin-bottom: 0;
-  transition: background 160ms var(--ease), border-color 160ms var(--ease), padding 160ms var(--ease), transform 160ms var(--ease);
-}
-.theme-barbershop .row-item:hover {
-  background: var(--surface-2);
-  border-color: var(--border-strong);
-  padding-left: 22px;
-  padding-right: 22px;
-  transform: translateY(-1px);
-}
-.theme-barbershop .row-price { color: var(--accent); }
-.theme-barbershop .row-desc { color: var(--muted); }
+/* nav */
+body.theme-barbershop .nav { background: rgba(18, 17, 16, 0.92); }
+body.theme-barbershop .brand { display: flex; flex-direction: column; line-height: 1.1; font-family: var(--serif); font-size: 18px; color: var(--text); gap: 2px; }
+body.theme-barbershop .brand small { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); font-style: italic; font-family: var(--serif); }
+body.theme-barbershop .nav-links a { font-size: 13px; letter-spacing: .06em; }
+body.theme-barbershop .nav-links a:hover { color: var(--accent); }
+body.theme-barbershop .lang-toggle { border-color: var(--border-strong); }
+body.theme-barbershop .btn-gold { background: var(--accent); border: 1px solid var(--accent); color: #1a1408; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; font-size: 12px; }
+body.theme-barbershop .btn-gold:hover { filter: brightness(1.1); }
+body.theme-barbershop .btn-outline { background: transparent; border: 1px solid var(--border-strong); color: var(--text); letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; font-size: 12px; }
+body.theme-barbershop .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+body.theme-barbershop .btn { border-radius: 2px; }
+body.theme-barbershop .btn-primary, body.theme-barbershop .btn-call { background: var(--accent); border-color: var(--accent); color: #1a1408; }
 
-/* theme refinements */
-.theme-barbershop .metrics-row { background-clip: content-box; }
+/* hero */
+body.theme-barbershop .at-hero { position: relative; min-height: 640px; display: flex; align-items: center; padding: 96px 0;
+  background: linear-gradient(90deg, rgba(18,17,16,.95) 0%, rgba(18,17,16,.7) 55%, rgba(18,17,16,.35) 100%), url("../img/barbershop-hero.png") center / cover no-repeat;
+  border-bottom: 1px solid var(--border); }
+body.theme-barbershop .at-eyebrow { display: inline-block; font-size: 11px; letter-spacing: .2em; color: var(--accent); border: 1px solid var(--border-strong); padding: 7px 14px; margin-bottom: 28px; font-family: var(--mono); }
+body.theme-barbershop .at-hero h1 { font-size: clamp(44px, 7vw, 84px); line-height: 1.02; margin: 0 0 24px; max-width: 9em; }
+body.theme-barbershop .at-hero h1 em { display: block; font-style: italic; color: var(--accent); }
+body.theme-barbershop .at-hero .lede { max-width: 34em; color: var(--muted); font-size: 17px; line-height: 1.7; margin-bottom: 36px; }
+body.theme-barbershop .at-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+body.theme-barbershop .at-ctas .btn { padding: 16px 28px; }
+
+/* sections */
+body.theme-barbershop .section { border-bottom: 1px solid var(--border); }
+body.theme-barbershop .at-kicker { display: block; text-align: center; font-size: 10px; letter-spacing: .28em; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; font-family: var(--mono); }
+body.theme-barbershop .at-title { text-align: center; font-size: clamp(28px, 4vw, 40px); margin: 0 0 48px; }
+body.theme-barbershop .at-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+body.theme-barbershop .at-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--accent); border-radius: 2px; padding: 28px 26px; transition: border-color 160ms, transform 160ms; }
+body.theme-barbershop .at-card:hover { border-color: var(--border-strong); border-top-color: var(--accent); transform: translateY(-2px); }
+body.theme-barbershop .at-card h3 { font-size: 22px; margin: 0 0 12px; color: var(--text); }
+body.theme-barbershop .at-card p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0 0 24px; flex: 1; }
+body.theme-barbershop .at-card-foot { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 16px; }
+body.theme-barbershop .at-price { font-family: var(--serif); font-size: 26px; color: var(--accent); }
+body.theme-barbershop .at-link { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--text); font-family: var(--mono); }
+body.theme-barbershop .at-link:hover { color: var(--accent); }
+
+body.theme-barbershop .at-story { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+body.theme-barbershop .at-story h2 { font-size: clamp(32px, 4.4vw, 50px); line-height: 1.12; margin: 0; }
+body.theme-barbershop .at-story p { color: var(--muted); font-size: 15px; line-height: 1.85; margin: 0 0 20px; }
+body.theme-barbershop .section-head h2 { color: var(--text); }
+body.theme-barbershop .section-head p { color: var(--muted); }
+
+/* booking */
+body.theme-barbershop .booking-shell { background: var(--surface); border-color: var(--border); border-radius: 2px; }
+body.theme-barbershop .booking-pane h3 { font-family: var(--serif); }
+body.theme-barbershop .bstep.on { background: var(--surface-2); }
+body.theme-barbershop .slot { border-radius: 2px; }
+body.theme-barbershop .slot.sel { background: var(--accent); color: #1a1408; border-color: var(--accent); }
+body.theme-barbershop .field input, body.theme-barbershop .field select, body.theme-barbershop .field textarea { background: #151412; color: var(--text); border-color: var(--border); }
+
+/* hours / info */
+body.theme-barbershop .hours-table caption { font-family: var(--serif); color: var(--text); }
+body.theme-barbershop .hours-table tr.today th, body.theme-barbershop .hours-table tr.today td { color: var(--accent); }
+body.theme-barbershop .info-line a:hover { color: var(--accent); }
+body.theme-barbershop .action-bar { background: rgba(18, 17, 16, 0.96); }
+
+/* demo badge above footer */
+body.theme-barbershop .demo-badge { text-align: center; padding: 14px 24px; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--accent); background: rgba(197, 160, 89, 0.07); border-top: 1px solid var(--border); }
+body.theme-barbershop .footer p, body.theme-barbershop .back-link { color: var(--faint); }
+
+@media (max-width: 860px) {
+  body.theme-barbershop .at-cards, body.theme-barbershop .at-story { grid-template-columns: 1fr; gap: 28px; }
+  body.theme-barbershop .at-hero { min-height: 0; padding: 64px 0; }
+}
