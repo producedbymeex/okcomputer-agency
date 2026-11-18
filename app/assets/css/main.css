@@ -1429,3 +1429,139 @@ body.studio .demo-thumb img[src*="contractor"] { object-position: center 20%; }
 .terms-card h3 { margin: 10px 0 8px; font-size: 19px; }
 .terms-card p { margin: 0; line-height: 1.6; opacity: 0.8; }
 .terms-num { font-size: 12px; letter-spacing: 0.14em; opacity: 0.6; }
+
+
+/* ==========================================================================
+   RESTORED: GLOBAL USER-AGENT FONT PURGE & SCOPED THEME LOCK
+   ========================================================================== */
+
+table, caption, tbody, tfoot, thead, tr, th, td,
+input, button, select, textarea {
+  font-family: inherit !important;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* 1. CONTRACTOR / ALAMO COMFORT AIR */
+body.theme-contractor,
+.theme-contractor,
+.theme-contractor * {
+  font-family: "Montserrat", -apple-system, sans-serif !important;
+}
+.theme-contractor caption,
+.theme-contractor thead th {
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 2. BARBERSHOP / SOUTHTOWN FADE CO. */
+body.theme-barbershop,
+.theme-barbershop {
+  font-family: "Playfair Display", Georgia, serif !important;
+}
+.theme-barbershop h1,
+.theme-barbershop h2,
+.theme-barbershop h3,
+.theme-barbershop h4,
+.theme-barbershop .eyebrow,
+.theme-barbershop .nav-links,
+.theme-barbershop button,
+.theme-barbershop .btn,
+.theme-barbershop thead th,
+.theme-barbershop caption,
+.theme-barbershop #booking-root,
+.theme-barbershop #booking-root * {
+  font-family: "Cinzel", Georgia, serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* 3. MED SPA / ELEVATE MED SPA */
+body.theme-medspa,
+.theme-medspa,
+.theme-medspa p,
+.theme-medspa span,
+.theme-medspa table,
+.theme-medspa th,
+.theme-medspa td,
+.theme-medspa caption,
+.theme-medspa input,
+.theme-medspa select,
+.theme-medspa textarea {
+  font-family: "Poppins", -apple-system, sans-serif !important;
+}
+.theme-medspa h1,
+.theme-medspa h2,
+.theme-medspa h3,
+.theme-medspa h4,
+.theme-medspa .hero-title,
+.theme-medspa .section-title,
+.theme-medspa .nav-brand {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+.theme-medspa #booking-root,
+.theme-medspa #booking-root * {
+  font-family: "Poppins", -apple-system, sans-serif !important;
+}
+.theme-medspa #booking-root strong,
+.theme-medspa #booking-root button strong,
+.theme-medspa #booking-root .slot strong,
+.theme-medspa #booking-root button > span:first-child,
+.theme-medspa #booking-root .slot > span:first-child,
+.theme-medspa #booking-root div.slot > span:first-child {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  letter-spacing: 0.02em !important;
+  color: #222220 !important;
+  display: block !important;
+  line-height: 1.2 !important;
+}
+.theme-medspa #booking-root small,
+.theme-medspa #booking-root button small,
+.theme-medspa #booking-root .slot small,
+.theme-medspa #booking-root .service-meta,
+.theme-medspa #booking-root button > span:last-child,
+.theme-medspa #booking-root .slot > span:last-child,
+.theme-medspa #booking-root div.slot > span:last-child {
+  font-family: "Poppins", -apple-system, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.03em !important;
+  color: #78716c !important;
+  display: block !important;
+}
+
+/* 4. RESTAURANT / CASA VERDE COCINA */
+body.theme-restaurant,
+.theme-restaurant,
+.theme-restaurant p,
+.theme-restaurant table,
+.theme-restaurant th,
+.theme-restaurant td,
+.theme-restaurant caption,
+.theme-restaurant input,
+.theme-restaurant select,
+.theme-restaurant button {
+  font-family: "Poppins", -apple-system, sans-serif !important;
+}
+.theme-restaurant h1,
+.theme-restaurant h2,
+.theme-restaurant h3,
+.theme-restaurant h4,
+.theme-restaurant .menu-item-title,
+.theme-restaurant .pillar-title,
+.theme-restaurant .brand-logo {
+  font-family: "Playfair Display", Georgia, serif !important;
+}
+
+/* 5. HOMEPAGE HVAC THUMBNAIL 16:9 VIEWPORT */
+body.studio .demo-thumb-contractor,
+body.studio .demo-thumb:has(img[src*="contractor"]) {
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+}
+body.studio .demo-thumb img[src*="contractor"] {
+  object-fit: cover !important;
+  object-position: center 20% !important;
+}
