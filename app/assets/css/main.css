@@ -1565,3 +1565,234 @@ body.studio .demo-thumb img[src*="contractor"] {
   object-fit: cover !important;
   object-position: center 20% !important;
 }
+
+
+/* ==========================================================================
+   STUDIO SHOWROOM (INDEX) MOBILE TOUCH TARGETS & TYPOGRAPHY LOCK
+   ========================================================================== */
+
+/* 1. Touch Target Compliance (>= 44x44px) */
+body.studio .brand,
+a.brand {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+body.studio .lang-toggle,
+.lang-toggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+}
+
+body.studio .nav-toggle,
+.nav-toggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px !important;
+}
+
+.skip-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* 2. Studio Form & Interactive Controls Typography Lock (Inter) */
+body.studio,
+body.studio input,
+body.studio select,
+body.studio textarea,
+body.studio button,
+body.studio .btn,
+body.studio .lang-toggle,
+body.studio .nav-toggle,
+body.studio #c-name,
+body.studio #c-biz,
+body.studio #c-email,
+body.studio #c-phone,
+body.studio #c-type,
+body.studio #inquiry-again {
+  font-family: "Inter", sans-serif !important;
+}
+
+body.studio input,
+body.studio select,
+body.studio textarea {
+  font-size: 16px !important; /* Prevents auto-zoom on iOS safari */
+}
+
+
+/* ==========================================================================
+   BARBERSHOP (SOUTHTOWN FADE CO.) MOBILE TOUCH TARGETS (>= 44x44px)
+   ========================================================================== */
+
+.theme-barbershop a.brand {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-barbershop .lang-toggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+}
+
+.theme-barbershop .btn-sm,
+.theme-barbershop .btn.btn-sm,
+.theme-barbershop .btn-gold.btn-sm {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 18px !important;
+}
+
+.theme-barbershop .at-link,
+.theme-barbershop a.at-link,
+.theme-barbershop .nav-links a,
+.theme-barbershop .footer a,
+.theme-barbershop a.back-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 6px;
+}
+
+
+/* ==========================================================================
+   CONTRACTOR (ALAMO COMFORT AIR) MOBILE TOUCH TARGETS (>= 44x44px)
+   ========================================================================== */
+
+.theme-contractor a.ac-brand,
+a.ac-brand {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+.theme-contractor .lang-toggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+}
+
+.theme-contractor a.back-link,
+.theme-contractor .back-link,
+a.back-link {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+
+/* ==========================================================================
+   RESTAURANT (CASA VERDE COCINA) MOBILE TOUCH TARGETS (>= 44x44px)
+   ========================================================================== */
+
+.theme-restaurant a.brand {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+.theme-restaurant .lang-toggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+}
+
+.theme-restaurant .sn-btn,
+.theme-restaurant .btn-partner,
+.theme-restaurant button.sn-btn,
+.theme-restaurant a.sn-btn {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 20px !important;
+  box-sizing: border-box !important;
+}
+
+.theme-restaurant .info-line a,
+.theme-restaurant a.info-line-val,
+.theme-restaurant .footer a,
+.theme-restaurant a.back-link {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  padding: 6px 4px;
+}
+
+
+/* ==========================================================================
+   MED SPA (ELEVATE MED SPA) MOBILE TOUCH TARGETS (>= 44x44px)
+   ========================================================================== */
+
+.theme-medspa .nav-brand,
+.theme-medspa a.nav-brand,
+.theme-medspa .nav a,
+.theme-medspa header a {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+.theme-medspa .lang-toggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+}
+
+.theme-medspa .rt-btn,
+.theme-medspa a.rt-btn,
+.theme-medspa button.rt-btn,
+.theme-medspa .btn,
+.theme-medspa a.btn {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 20px !important;
+  box-sizing: border-box !important;
+}
+
+.theme-medspa .contact-info a,
+.theme-medspa .hours-card a,
+.theme-medspa .footer a,
+.theme-medspa a.back-link {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  padding: 6px 4px;
+}
+
+.theme-medspa #booking-root button,
+.theme-medspa #booking-root .slot,
+.theme-medspa #booking-root .service-card {
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+}
